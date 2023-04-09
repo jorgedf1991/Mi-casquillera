@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs') %>
+
+
+    <body>
+        <!--Inicio cabecera-->
+        <%- include('partials/header.ejs') %>
+            <!--Fin cabecera-->
+            <div id="list-user">
+                <div class="panel-users">
+                    <% for(let i=0; i < list.length; i++) {%>
+                        <div id="box-profile-users">
+                            <div class="profile-users">
+                              <img src="/img/imageUsers/<%=list[i].image %>" alt="">  
+                            </div>
+
+                            <div class="profile-users">
+                                <%= list[i].name %>
+                            </div>
+
+                            <div class="profile-users">
+                                <%= list[i].email %>
+                            </div>
+
+                            <div class="profile-users">
+                                <%= list[i].country%>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+            </div>
+            <!--Inicio Footer-->
+            <div class="clearfix"></div>
+            <%- include('partials/footer.ejs') %>
+
+                <!--Inicio Footer-->
+
+    </body>
+
+</html>

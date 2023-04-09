@@ -1,0 +1,70 @@
+/*fuentes*/
+@font-face {
+  font-family: "Candara";
+  src: url(fonts/candara-4.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url(fonts/BebasNeue.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WebSymbolsRegular";
+  src: url("./fonts/websymbols-regular-webfont.svg#WenSymbolsRegular") format("svg"),
+    url("./fonts/websymbols-regular-webfont.eot") format("svg"),
+    url("./fonts/websymbols-regular-webfont.eot#iefix") format("embedded-opentype"),
+    url("./fonts/websymbols-regular-webfont.woff") format("woff"),
+    url("./fonts/websymbols-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*Generalres*/
+
+
+/*REGISTER*/
+
+#formRegister {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#box-form {
+  margin: 10px;
+  background: white;
+  border: 1px solid red;
+}
+
+
+.box-register {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.box-register input, select{
+  font-size: 18px;
+}
+
+.box-register input[type="file"]{
+  font-size: 11px;
+}
+
+.box-button button[type="submit"],
+.box-button button[type="reset"]{
+  border: none;
+  background: #FDB825;
+  color: white;
+  margin: 15px;
+  padding: 12px;
+  border-radius: 4px;
+}

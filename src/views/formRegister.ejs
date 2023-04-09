@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs') %>
+
+
+    <body>
+        <!--Inicio cabecera-->
+        <%- include('partials/header.ejs') %>
+            <!--Fin cabecera-->
+            <div id="formRegister">
+                <div id="box-form">
+                    <form action="/user/create" method="post" enctype="multipart/form-data">
+                        <div class="box-register">
+                            <input type="text" name="name" placeholder="Indica tu nombre">
+                        </div>
+
+                        <div class="box-register">
+                            <input type="password" name="password" placeholder="Indica tu password">
+                        </div>
+                
+                        <div class="box-register">
+                            <input type="email" name="email" id="email" placeholder="Indica tu email">
+                        </div>
+
+                        <div class="box-register">
+                            <select name="select" id="">
+                                <option value="">Selecciona un pais</option>
+                                <option value="argentina">Argentina</option>
+                                <option value="bolivia">Bolivia</option>
+                                <option value="brasil">Brasil</option>
+                                <option value="chile">Chile</option>
+                                <option value="colombia">Colombia</option>
+                                <option value="ecuador">Ecuador</option>
+                                <option value="paraguay">Paraguay</option>
+                                <option value="peru">Peru</option>
+                                <option value="uruguay">Uruguay</option>
+                                <option value="venezuela">Venezuela</option>
+                            </select>
+                        </div>
+
+                        <div class="box-register">
+                            <input type="file" name="imageUsers">
+                        </div>
+
+                        <div class="box-register">
+                            <div class="box-button">
+                                <button type="submit">Crear</button>
+                                <button type="reset">Borrar</button>
+                            </div>
+                        </div>
+                    
+                    </form>
+                </div>
+            </div>
+            <!--Inicio Footer-->
+            <div class="clearfix"></div>
+            <%- include('partials/footer.ejs') %>
+
+                <!--Inicio Footer-->
+
+
+    </body>
+
+</html>
