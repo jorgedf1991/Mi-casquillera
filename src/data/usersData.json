@@ -1,57 +1,49 @@
 [
  {
   "id": 1,
-  "name": "jorge",
-  "password": 22610552,
-  "email": "jorge@gmail.com"
- },
- {
-  "id": 2,
-  "name": "fanta",
-  "password": "asasasasas",
-  "email": "a@hotmail.com"
- },
- {
-  "id": 3,
-  "name": "asasas",
-  "password": "$2a$10$bxNXXkzu4UdYIo4KOrO2SeA6Yesk5LNcXzsdZavL7Qe.UUp2n6lZW",
-  "email": "a@hotmail.com"
- },
- {
-  "id": 4,
-  "name": "fantaa",
-  "password": "$2a$10$sB6Qb8i0.roGap27PguCxOqmPK/V2mo5iuFbrPENhpBfsfBa3aeM6",
-  "email": "jorgeldiaz1628@gmail.com",
-  "country": "colombia"
- },
- {
-  "id": 5,
   "name": "aquaman",
   "password": "$2a$10$M3.6hyunVWwD2f6FhR3fT.dX69LlQJ7uNTOecLQaPu2gzLtHPaSL.",
   "email": "jorgeldiaz1628@gmail.com",
   "country": "colombia"
  },
  {
-  "id": 6,
-  "name": "github",
-  "password": "$2a$10$tBwzp3n.YFp//WPfrtPsfOJu5nNU0S6yJOX0dthJ4cdbhBHdISX7S",
+  "id": 2,
+  "name": "fanta",
+  "password": "$2a$10$OwRA7pZhkmuuQ7dE4JvxnOphmHEr7wjvR36qhWO.9KzY90mThbQ0K",
   "email": "jorgeldiaz1628@gmail.com",
-  "country": "uruguay"
+  "country": "brasil",
+  "image": "default-user-image.png"
  },
  {
-  "id": 7,
-  "name": "",
-  "password": "$2a$10$PrACrP.gdBADmUOH.tvXxuq5P4U2SsZVdUt9KF2bmPoU.TZN3SpKu",
-  "email": "",
+  "id": 3,
+  "name": "asasas",
+  "password": "$2a$10$CF1KzTM5OHQTCgc9H.TpDer.aM8oOz5rqL6SBk7jIy3jmDDUmO1tG",
+  "email": "jorgeldiaz1628@gmail.com",
   "country": "",
   "image": "default-user-image.png"
  },
  {
-  "id": 8,
-  "name": "PitufoGit",
-  "password": "$2a$10$cbJnUruiQeXB4PPGE7nww.VhN0l5JdhOEXsGWYo362i8sKgralxLe",
+  "id": 4,
+  "name": "fanta",
+  "password": "$2a$10$6uGcKr3YesdvLijodKdxcuMHDLlQNRDA7JQzl9ebBZw1isuAyGvGa",
+  "email": "jorgeldiaz1628@gmail.com",
+  "country": "argentina",
+  "image": "default-user-image.png"
+ },
+ {
+  "id": 5,
+  "name": "fanta",
+  "password": "$2a$10$RkdXqZfWg1Jwoenvl9Ai/ONZrbIfXeqSLyVfCH0hwKGFNrffGlN.G",
+  "email": "jorgeldiaz1628@gmail.com",
+  "country": "argentina",
+  "image": "default-user-image.png"
+ },
+ {
+  "id": 6,
+  "name": "github",
+  "password": "$2a$10$9U/8t1Jm.2A1fzpfDl5D/O7HL.j..hST1F/heaLZoxeJao95IUSuK",
   "email": "jorgeldiaz1628@gmail.com",
   "country": "colombia",
-  "image": "1681069112939.png"
+  "image": "1681086027386.png"
  }
 ]

@@ -33,7 +33,6 @@
 #formRegister {
   display: flex;
   justify-content: center;
-  border: 1px solid black;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -41,7 +40,8 @@
 #box-form {
   margin: 10px;
   background: white;
-  border: 1px solid red;
+  box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
+    0px 1px white inset, 0px -3px 2px #47361A inset;
 }
 
 
@@ -51,20 +51,36 @@
   margin: 20px;
 }
 
-.box-register input, select{
+.box-register input,
+select {
   font-size: 18px;
 }
 
-.box-register input[type="file"]{
+.box-register input[type="file"] {
   font-size: 11px;
 }
 
 .box-button button[type="submit"],
-.box-button button[type="reset"]{
+.box-button button[type="reset"] {
   border: none;
   background: #FDB825;
   color: white;
   margin: 15px;
   padding: 12px;
   border-radius: 4px;
+}
+
+
+.box-imageUsers h3{
+  text-align: center;
+}
+
+@media (min-width: 1370px) {
+  .box-register input,
+  select {
+    font-size: 26px;
+  }
+  .box-imageUsers h3{
+    font-size: 26px;
+  }
 }

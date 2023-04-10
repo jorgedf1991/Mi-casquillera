@@ -1,6 +1,6 @@
 @media (max-width: 1254px) {
   .wrap {
-    width: 90%;
+    width: 90%; 
     margin: 0px auto;
   }
   #banner h1 {
@@ -37,7 +37,7 @@
     width: 14%;
   }
   #footer h5 {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 
@@ -66,7 +66,7 @@
   }
 
   #footer h5 {
-    font-size: 22px;
+    font-size: 16px;
   }
 }
 
@@ -223,7 +223,7 @@
     height: 240px;
   }
   #menu {
-    width: 100%;
+    width: 75%;
   }
   #menu ul li {
     width: 100%;

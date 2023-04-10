@@ -10,25 +10,25 @@
             <!--Fin cabecera-->
             <div id="list-user">
                 <div class="panel-users">
-                    <% for(let i=0; i < list.length; i++) {%>
+                    <% users.forEach((user) => {%>
                         <div id="box-profile-users">
                             <div class="profile-users">
-                              <img src="/img/imageUsers/<%=list[i].image %>" alt="">  
+                              <img src="/img/imageUsers/<%=user.image %>" alt="">  
                             </div>
 
                             <div class="profile-users">
-                                <%= list[i].name %>
+                                <%= user.name %>
                             </div>
 
                             <div class="profile-users">
-                                <%= list[i].email %>
+                                <%= user.email %>
                             </div>
 
                             <div class="profile-users">
-                                <%= list[i].country%>
+                                <%= user.country%>
                             </div>
                         </div>
-                        <% } %>
+                        <% } )%>
                 </div>
             </div>
             <!--Inicio Footer-->
