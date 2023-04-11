@@ -1,0 +1,7 @@
+#list-user{
+    border: 2px solid red;
+    display: flex;
+}
+div #box-profile-users{
+    border: 2px solid blue;
+}

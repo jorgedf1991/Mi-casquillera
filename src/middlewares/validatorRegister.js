@@ -7,4 +7,4 @@ const registerValidator = [
     body('select').notEmpty().withMessage('Debes elegir un pais')
 ];
 
-module.exports = registerValidator;
+module.exports = registerValidator; 
