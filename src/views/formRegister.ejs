@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head.ejs') %>
+<%- include('partials/head.ejs', {title: 'Registro'}) %>
 
 
     <body>
@@ -20,7 +20,12 @@
                         </div>
 
                         <div class="box-register">
-                            <input type="email" name="email" id="email" placeholder="Indica tu email">
+                            <input type="email" name="email" id="email" placeholder="Indica tu email" value="<%= locals.oldData ? oldData.email : null%>">
+                            <% if (locals.errors && errors.email) { %>
+                                <div>
+                                    <%= errors.email.msg %>
+                                </div> 
+                                <% } %>
                         </div>
 
                         <div class="box-register">
@@ -59,9 +64,10 @@
             <div class="clearfix"></div>
             <%- include('partials/footer.ejs') %>
 
-                <!--Inicio Footer-->
+                <!--Fin Footer-->
 
-
+                <!--Script-->
+                <script src="/navScript.js"></script>
     </body>
 
 </html>

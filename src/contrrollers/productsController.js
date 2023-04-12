@@ -9,6 +9,11 @@ function getData() {
 
 const controller = {
 
+    productDetail : (req, res) =>{
+        const productDetail = getData();
+        res.render('productDetails', { productDetail });
+    },
+
     formCreate: (req, res) => {
         try {
             res.render('formCreate');
@@ -30,7 +35,7 @@ const controller = {
             }
             products.push(newProduct);
             fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-            res.redirect('/details');
+            res.redirect('/product/details');
         } catch (error) {
             console.log(error);
         }

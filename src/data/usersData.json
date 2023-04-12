@@ -45,5 +45,13 @@
   "email": "jorgeldiaz1628@gmail.com",
   "country": "colombia",
   "image": "1681086027386.png"
+ },
+ {
+  "id": 7,
+  "name": "fanta",
+  "password": "$2a$10$cK00y4LcUdTUKJ0iI2ptHezzbmLiZDn4N4rF.0MffebA3WLCdEb9q",
+  "email": "jorgeldiaz1628@gmail.com",
+  "country": "bolivia",
+  "image": "default-user-image.png"
  }
 ]
