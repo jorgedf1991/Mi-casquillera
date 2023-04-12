@@ -35,7 +35,7 @@ body {
 }
 
  .wrap {
-  width: 1270px;
+  width: 1200px;
   margin: 0 auto;
 } 
 
@@ -204,31 +204,7 @@ body {
   animation: showText 10s linear;
 }
 
-@keyframes showText {
-  0% {
-    transform: translateX(-600%) scale(5, 5);
-    opacity: 1;
-  }
 
-  50% {
-    transform: translateX(600%) scale(5, 5);
-    opacity: 1;
-  }
-
-  75% {
-    transform: translateX(-600%) scale(5, 5);
-    text-shadow: none;
-    color: transparent;
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0%) scale(1, 1);
-    text-shadow: 2px 2px 1px #47361A;
-    color: white;
-    opacity: 1;
-  }
-}
 
 /*Barra lateral*/
 
@@ -263,16 +239,23 @@ aside h3:first-child {
 }
 
 #search {
-  width: 90%;
-  height: 30px;
-  margin: 10px auto;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 1px 1px 4px #47361A inset;
-}
+      height: 28px;
+      margin: 26px auto;
+      border: none;
+  }
+  #search input[type="text"]{
+    border: none;
+    font-size: 15px;
+  }
 
-#lateral input[type="text"] {
+  #search .icon{
+    margin-left: -17px;
+    font-size: 12px;
+    border: none;
+  }
+
+
+#lateral input[type="text"]{
   width: 85%;
   height: 30px;
   border: none;

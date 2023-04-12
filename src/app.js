@@ -24,7 +24,7 @@ app.use('/user', userRoute);
 
 const port = process.env.PORT || 3000;
 app.listen( port, ()=> {
-    console.log('puerto on ' + port);
+    console.log('puerto on http://localhost:' + port);
 })
 
 
