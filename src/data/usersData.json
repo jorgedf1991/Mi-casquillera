@@ -45,5 +45,53 @@
   "email": "jorgeldiaz1628@gmail.com",
   "country": "colombia",
   "image": "1681086027386.png"
+ },
+ {
+  "id": 7,
+  "name": "a",
+  "password": "$2a$10$syfoh6g6vaIXJKKc8ZDbFuSjVmdWemjuxm3XU0Avd4oH5HNr4T/wS",
+  "email": "sadasd@dfadasd.com",
+  "country": "argentina",
+  "image": "default-user-image.png"
+ },
+ {
+  "id": 8,
+  "name": "a",
+  "password": "$2a$10$CYonslE8vPlj4IHKG317cul1jkGUnAvGt.yqgDDTbZTEoj6res.lW",
+  "email": "sadasd@dfadasd.com",
+  "country": "argentina",
+  "image": "1681092545298.stl"
+ },
+ {
+  "id": 9,
+  "name": "",
+  "password": "$2a$10$6GuTvlRlC5/APjzY7ru02.PcE55yyRfseDKFhbwYC6VEiUYATz/tS",
+  "email": "",
+  "country": "",
+  "image": "default-user-image.png"
+ },
+ {
+  "id": 10,
+  "name": "",
+  "password": "$2a$10$8t9zcUUuDc3hVjWULYAVDezaDClH.pa.E1us9ey6GgmaH7l8g8j.m",
+  "email": "",
+  "country": "",
+  "image": "default-user-image.png"
+ },
+ {
+  "id": 11,
+  "name": "",
+  "password": "$2a$10$7BjXIA8LYa/6CvlGl9p5YOpAQSRhcIbAVB.3HJYV3scM6vac26SeO",
+  "email": "",
+  "country": "bolivia",
+  "image": "default-user-image.png"
+ },
+ {
+  "id": 12,
+  "name": "",
+  "password": "$2a$10$Q5.h5aokywoU9a0mYC43uOoWEKR00ihZZvPnqeeHkFy5LtszSFdQ6",
+  "email": "",
+  "country": "",
+  "image": "default-user-image.png"
  }
 ]
