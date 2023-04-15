@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head.ejs', {title: 'Registrar Producto'}) %>
+
+    <body>
+        <!--Inicio cabecera-->
+        <%- include('partials/header.ejs') %>
+            <!--Fin cabecera-->
+           
+            <div id="formRegister">
+                <div id="box-form">
+                    <form action="/product/create" method="post" enctype="multipart/form-data">
+                        <div class="box-register">
+                            <input type="text" name="name" placeholder="Nombre del product">
+                        </div>
+
+                        <div class="box-register">
+                            <input type="number" name="price" placeholder="Indica un precio">
+                        </div>
+
+                        <div class="box-register">
+                            <textarea name="description"  cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div class="box-imageUsers">
+                            <h3>Foto del producto</h3>
+                            <div class="box-register">
+                                <input type="file" name="imageProduct">
+                            </div>
+                        </div>
+
+                        <div class="box-register">
+                            <div class="box-button">
+                                <button type="submit">Crear</button>
+                                <button type="reset">Borrar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>  
+              
+            <!--Inicio Footer-->
+            <div class="clearfix"></div>
+            <%- include('partials/footer.ejs') %>
+
+                <!--Fin Footer-->
+
+                <!--Script-->
+                <script src="/navScript.js"></script>
+    </body>
+
+</html>

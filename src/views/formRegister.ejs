@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head.ejs') %>
+<%- include('partials/head.ejs', {title: 'Registro'}) %>
 
 
     <body>
@@ -12,15 +12,30 @@
                 <div id="box-form">
                     <form action="/user/create" method="post" enctype="multipart/form-data">
                         <div class="box-register">
-                            <input type="text" name="name" placeholder="Indica tu nombre">
+                            <input type="text" name="name" placeholder="Indica tu nombre" value="<%= locals.oldData ? oldData.name : null%>">
+                            <% if (locals.errors && errors.name) { %>
+                                <div>
+                                    <%= errors.name.msg %>
+                                </div> 
+                                <% } %>
                         </div>
 
                         <div class="box-register">
                             <input type="password" name="password" placeholder="Indica tu password">
+                            <% if (locals.errors && errors.password) { %>
+                                <div>
+                                    <%= errors.password.msg %>
+                                </div> 
+                                <% } %>
                         </div>
 
                         <div class="box-register">
-                            <input type="email" name="email" id="email" placeholder="Indica tu email">
+                            <input type="email" name="email"  placeholder="Indica tu email" value="<%= locals.oldData ? oldData.email : null%>">
+                            <% if (locals.errors && errors.email) { %>
+                                <div>
+                                    <%= errors.email.msg %>
+                                </div> 
+                                <% } %>
                         </div>
 
                         <div class="box-register">
@@ -59,9 +74,10 @@
             <div class="clearfix"></div>
             <%- include('partials/footer.ejs') %>
 
-                <!--Inicio Footer-->
+                <!--Fin Footer-->
 
-
+                <!--Script-->
+                <script src="/navScript.js"></script>
     </body>
 
 </html>

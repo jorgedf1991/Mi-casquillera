@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head.ejs') %>
+<%- include('partials/head.ejs', {title: 'Detalles de Productos'}) %>
 
 
     <body>
         <!--Inicio cabecera-->
         <%- include('partials/header.ejs') %>
             <!--Fin cabecera-->
+           
             <div id="list-user">
                 <div class="panel-users">
-                    <% users.forEach((user) => {%>
+                    <% productDetail.forEach((product) => {%>
                         <div id="box-profile-users">
                             <div class="profile-users">
-                              <img src="/img/imageUsers/<%=user.image %>" alt="">  
+                              <img src="/img/imageUsers/<%=product.image %>" alt="">  
                             </div>
 
                             <div class="profile-users">
-                                <%= user.name %>
+                                <%= product.name %>
                             </div>
 
                             <div class="profile-users">
-                                <%= user.email %>
+                                <%= product.price %>
                             </div>
 
                             <div class="profile-users">
-                                <%= user.country%>
+                                <%= product.description %>
                             </div>
                         </div>
                         <% } )%>
                 </div>
-            </div>
+            </div>  
+              
             <!--Inicio Footer-->
             <div class="clearfix"></div>
             <%- include('partials/footer.ejs') %>
 
                 <!--Fin Footer-->
 
-                 <!--Script-->
-            <script src="/navScript.js"></script>
+                <!--Script-->
+                <script src="/navScript.js"></script>
     </body>
 
 </html>

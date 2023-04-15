@@ -1,0 +1,24 @@
+[
+ {},
+ {
+  "id": 1,
+  "name": "fanta",
+  "price": "1200",
+  "description": "gaseosa",
+  "image": "1681263571568.png"
+ },
+ {
+  "id": 2,
+  "name": "Pitufo",
+  "price": "1222",
+  "description": "asasasasss",
+  "image": "default-user-image.png"
+ },
+ {
+  "id": 3,
+  "name": "fanta",
+  "price": "1200",
+  "description": "vvghghgfhgfhgfhgfhfhgfhfhgfhfgfhgf",
+  "image": "default-user-image.png"
+ }
+]
