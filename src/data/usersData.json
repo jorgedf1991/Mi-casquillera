@@ -1,65 +1,12 @@
 [
+ 
  {
   "id": 1,
-  "name": "aquaman",
-  "password": "$2a$10$M3.6hyunVWwD2f6FhR3fT.dX69LlQJ7uNTOecLQaPu2gzLtHPaSL.",
-  "email": "jorgeldiaz1628@gmail.com",
-  "country": "colombia"
- },
- {
-  "id": 2,
-  "name": "fanta",
-  "password": "$2a$10$OwRA7pZhkmuuQ7dE4JvxnOphmHEr7wjvR36qhWO.9KzY90mThbQ0K",
-  "email": "jorgeldiaz1628@gmail.com",
-  "country": "brasil",
-  "image": "default-user-image.png"
- },
- {
-  "id": 3,
-  "name": "asasas",
-  "password": "$2a$10$CF1KzTM5OHQTCgc9H.TpDer.aM8oOz5rqL6SBk7jIy3jmDDUmO1tG",
-  "email": "jorgeldiaz1628@gmail.com",
-  "country": "",
-  "image": "default-user-image.png"
- },
- {
-  "id": 4,
   "name": "fanta",
   "password": "$2a$10$6uGcKr3YesdvLijodKdxcuMHDLlQNRDA7JQzl9ebBZw1isuAyGvGa",
   "email": "jorgeldiaz1628@gmail.com",
   "country": "argentina",
   "image": "default-user-image.png"
- },
- {
-  "id": 5,
-  "name": "fanta",
-  "password": "$2a$10$RkdXqZfWg1Jwoenvl9Ai/ONZrbIfXeqSLyVfCH0hwKGFNrffGlN.G",
-  "email": "jorgeldiaz1628@gmail.com",
-  "country": "argentina",
-  "image": "default-user-image.png"
- },
- {
-  "id": 6,
-  "name": "github",
-  "password": "$2a$10$9U/8t1Jm.2A1fzpfDl5D/O7HL.j..hST1F/heaLZoxeJao95IUSuK",
-  "email": "jorgeldiaz1628@gmail.com",
-  "country": "colombia",
-  "image": "1681086027386.png"
- },
- {
-  "id": 7,
-  "name": "fanta",
-  "password": "$2a$10$cK00y4LcUdTUKJ0iI2ptHezzbmLiZDn4N4rF.0MffebA3WLCdEb9q",
-  "email": "jorgeldiaz1628@gmail.com",
-  "country": "bolivia",
-  "image": "default-user-image.png"
- },
- {
-  "id": 8,
-  "name": "fran",
-  "password": "$2a$10$62Oc27keAuWU8weQUr/Rlu.gilqmh/NBc0kj6hFodhdVT3VZgDFXi",
-  "email": "jorgeldiaz199128@gmail.com",
-  "country": "colombia",
-  "image": "1681327560982.png"
  }
+ 
 ]

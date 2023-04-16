@@ -49,6 +49,7 @@
   display: flex;
   justify-content: center;
   margin: 20px;
+  flex-direction: column;
 }
 
 .box-register input,
@@ -71,16 +72,22 @@ select {
 }
 
 
-.box-imageUsers h3{
+.box-imageUsers h3 {
   text-align: center;
 }
 
 @media (min-width: 1370px) {
+
   .box-register input,
   select {
     font-size: 26px;
   }
-  .box-imageUsers h3{
+
+  .box-imageUsers h3 {
     font-size: 26px;
   }
+}
+
+div .error-validation{
+  color: red;
 }

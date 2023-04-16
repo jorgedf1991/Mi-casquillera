@@ -14,7 +14,7 @@
                         <div class="box-register">
                             <input type="text" name="name" placeholder="Indica tu nombre" value="<%= locals.oldData ? oldData.name : null%>">
                             <% if (locals.errors && errors.name) { %>
-                                <div>
+                                <div class="error-validation">
                                     <%= errors.name.msg %>
                                 </div> 
                                 <% } %>
@@ -23,7 +23,7 @@
                         <div class="box-register">
                             <input type="password" name="password" placeholder="Indica tu password">
                             <% if (locals.errors && errors.password) { %>
-                                <div>
+                                <div class="error-validation">
                                     <%= errors.password.msg %>
                                 </div> 
                                 <% } %>
@@ -32,7 +32,7 @@
                         <div class="box-register">
                             <input type="email" name="email"  placeholder="Indica tu email" value="<%= locals.oldData ? oldData.email : null%>">
                             <% if (locals.errors && errors.email) { %>
-                                <div>
+                                <div class="error-validation">
                                     <%= errors.email.msg %>
                                 </div> 
                                 <% } %>
