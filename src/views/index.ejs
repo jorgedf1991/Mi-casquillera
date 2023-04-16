@@ -84,28 +84,39 @@
 
                 </section>
                 <!--Fin articulos-->
-
+                
                 <!--Inicio barra lateral-->
-
+                
                 <aside id="lateral">
+                    <% if (locals.isLogged) { %>
 
-                    <h3>Login</h3>
-                    <div id="login" class="aside-box">
-                        <form action="">
-                            <label id="user" class="icon">U</label>
-                            <input type="email">
-
-                            <label id="password" class="icon">w</label>
-                            <input type="password" name="">
-
-                            <input type="submit" value="Entrar">
-                            <input type="reset" value="Borrar">
-
-                            <a href="/user/create">Registrate aqui</a>
-                            <a href="#">¿Has olvidado tu contraseña?</a>
-
-                        </form>
-                    </div>
+                        <h3>hola</h3>
+                        <% } else { %>
+                         
+                            <h3>Login</h3>
+                            <div id="login" class="aside-box">
+                                <form action="/user/login" method="post">
+                                    <label id="user" class="icon">U</label>
+                                    <input type="email" name="email">
+                                    <% if (locals.errors && errors.email) { %>
+                                     <div class="error-validation">
+                                        <%= errors.email.msg %>
+                                     </div>
+                                    <% } %>
+                                    
+                                    <label id="password" class="icon">w</label>
+                                    <input type="password" name="password">
+        
+                                    <input type="submit" value="Entrar">
+                                    <input type="reset" value="Borrar">
+        
+                                    <a href="/user/create">Registrate aqui</a>
+                                    <a href="#">¿Has olvidado tu contraseña?</a>
+        
+                                </form>
+                            </div>
+                            <% } %>
+                    
 
                     <h3>Redes sociales</h3>
                     <div id="social" class="aside-box">

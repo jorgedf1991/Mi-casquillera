@@ -90,4 +90,5 @@ select {
 
 div .error-validation{
   color: red;
+  margin-left: 6px;
 }

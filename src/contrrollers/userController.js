@@ -56,6 +56,40 @@ const contrrollers = {
     listUsers: (req, res) => {
         const users= getData();
         res.render('listUsers', { users })
+    },
+
+    loginProcces : (req, res) =>{
+        let user = getData();
+        let userToLogin = user.find(user => user.email === req.body.email);
+        if(userToLogin){
+            let passwordCorrect = bcrypt.compareSync(req.body.password, userToLogin.password);
+            if(passwordCorrect){
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                console.log(req.session);
+                return res.render('index')
+            }
+            return res.render('index', {
+                errors : {
+                    email : {
+                        msg : 'Datos incorrectos'
+                    }
+                }
+            })
+        }
+
+        return res.render('index', {
+            errors : {
+                email : {
+                    msg : 'Email incorrecto'
+                }
+            }
+        })
+    },
+
+    logout : (req, res) => {
+        req.session.destroy();
+      return  res.redirect('/');
     }
 }
 
