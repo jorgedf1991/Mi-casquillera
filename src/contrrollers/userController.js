@@ -2,7 +2,7 @@ const { validationResult } = require('express-validator');
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
-
+const fetch = require('node-fetch');
 
 
 const userFilePath = path.join(__dirname, '../data/usersData.json');
@@ -12,14 +12,19 @@ function getData() {
 
 const contrrollers = {
 
-    form: (req, res) => {
-        res.render('formRegister');
+    form:  (req, res) => {
+        fetch('https://restcountries.com/v3.1/all')
+        .then(response => response.json())
+        .then(countries => {
+           return res.render('formRegister', { countries });
+        })
 
     },
-    create: (req, res) => {
+
+    create: async (req, res) => {
         const errors = validationResult(req);
         const users = getData();
-
+        const countries = await fetch('https://restcountries.com/v3.1/all').then(response => response.json());
         if(errors.isEmpty()){
             const existingUser = users.find(user => user.email === req.body.email);
             if(existingUser){
@@ -49,6 +54,7 @@ const contrrollers = {
             res.render('formRegister', {
                  errors: errors.mapped(),
                   oldData: req.body,
+                  countries
                 });
         }
     },

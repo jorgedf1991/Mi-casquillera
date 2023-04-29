@@ -1,5 +1,4 @@
 [
- 
  {
   "id": 1,
   "name": "fanta",
@@ -7,6 +6,13 @@
   "email": "jorgeldiaz1628@gmail.com",
   "country": "argentina",
   "image": "default-user-image.png"
+ },
+ {
+  "id": 2,
+  "name": "fanta",
+  "password": "$2a$10$a4Al3bQ28Y.huWfxo83EY.DaV/CuA0E85tarcELObDYXnN44MQ..S",
+  "email": "jorgeldiaz@gmail.com",
+  "country": "Barbados",
+  "image": "default-user-image.png"
  }
- 
 ]

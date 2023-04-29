@@ -40,17 +40,9 @@
 
                         <div class="box-register">
                             <select name="select" id="">
-                                <option value="">Selecciona un pais</option>
-                                <option value="argentina">Argentina</option>
-                                <option value="bolivia">Bolivia</option>
-                                <option value="brasil">Brasil</option>
-                                <option value="chile">Chile</option>
-                                <option value="colombia">Colombia</option>
-                                <option value="ecuador">Ecuador</option>
-                                <option value="paraguay">Paraguay</option>
-                                <option value="peru">Peru</option>
-                                <option value="uruguay">Uruguay</option>
-                                <option value="venezuela">Venezuela</option>
+                                <% countries.forEach(country => { %>
+                                 <option><%= country.name.common %></option>
+                                <% }) %>
                             </select>
                         </div>
                         <div class="box-imageUsers">
