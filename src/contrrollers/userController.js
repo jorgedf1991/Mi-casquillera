@@ -29,6 +29,7 @@ const contrrollers = {
             const existingUser = users.find(user => user.email === req.body.email);
             if(existingUser){
                 return res.render('formRegister', {
+                  countries,
                     errors : {
                          email: {
                              msg: "El email ya se encuentra registrado" 

@@ -14,5 +14,13 @@
   "email": "jorgeldiaz@gmail.com",
   "country": "Barbados",
   "image": "default-user-image.png"
+ },
+ {
+  "id": 3,
+  "name": "Pitufo",
+  "password": "$2a$10$T1Ig5KlTgxUYmxQf/6FNsO6/E4kIhQ5mHz6/Gw2bYNruoa0shwDQK",
+  "email": "jorgeldiaz16@gmail.com",
+  "country": "Barbados",
+  "image": "default-user-image.png"
  }
 ]
