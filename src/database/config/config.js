@@ -1,3 +1,4 @@
+require('dotenv').config();
 module.export = {
   "development": {
     "username": "root",
