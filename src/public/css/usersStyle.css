@@ -1,7 +1,142 @@
-#list-user{
-    border: 2px solid red;
+#list-user {
     display: flex;
+    text-align: center;
+    margin: 60px;
 }
-div #box-profile-users{
-    border: 2px solid blue;
+
+div #box-profile-users {
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-evenly;
+    display: inline-block;
+    width: 91%;
+    box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
+        0px 1px white inset, 0px -3px 2px #47361A inset;
+
+}
+
+.profile-users {
+    margin: 10px;
+    padding: 0px;
+    display: block;
+    width: 92%;
+}
+
+.profile-users img {
+    width: 90%;
+    background: #f4f7f4;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 1px 1px 2px #47361A;
+    padding: 10px;
+
+
+}
+
+@media (min-width: 768px) {
+    #list-user {
+        display: flex;
+        text-align: center;
+    }
+
+    div #box-profile-users {
+        background: white;
+        margin: 10px;
+        padding: 10px;
+        justify-content: space-evenly;
+        display: inline-block;
+        width: 40%;
+        box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
+            0px 1px white inset, 0px -3px 2px #47361A inset;
+
+    }
+
+    .profile-users {
+        margin: 10px;
+        padding: 0px;
+        display: block;
+        width: 90%;
+    }
+
+    .profile-users img {
+        width: 90%;
+        background: #f4f7f4;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 1px 1px 2px #47361A;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #list-user {
+        display: flex;
+        text-align: center;
+    }
+
+    div #box-profile-users {
+        background: white;
+        margin: 20px;
+        padding: 10px;
+        justify-content: space-evenly;
+        display: inline-block;
+        width: 25%;
+        box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
+            0px 1px white inset, 0px -3px 2px #47361A inset;
+
+    }
+
+    .profile-users {
+        margin: 5px;
+        padding: 0px;
+        display: block;
+        width: 90%;
+    }
+
+    .profile-users img {
+        width: 95%;
+        background: #f4f7f4;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 1px 1px 2px #47361A;
+        padding: 10px;
+    }
+   
+}
+
+@media (min-width: 1044px) {
+    #list-user {
+        display: flex;
+        text-align: center;
+    }
+
+    div #box-profile-users {
+        background: white;
+        margin: 20px;
+        padding: 10px;
+        justify-content: space-evenly;
+        display: inline-block;
+        width: 20%;
+        box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
+            0px 1px white inset, 0px -3px 2px #47361A inset;
+
+    }
+
+    .profile-users {
+        margin: 5px;
+        padding: 0px;
+        display: block;
+        width: 90%;
+    }
+
+    .profile-users img {
+        width: 95%;
+        background: #f4f7f4;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 1px 1px 2px #47361A;
+        padding: 10px;
+    }
+   
 }

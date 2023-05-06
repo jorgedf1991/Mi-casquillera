@@ -22,5 +22,21 @@
   "email": "jorgeldiaz16@gmail.com",
   "country": "Barbados",
   "image": "default-user-image.png"
+ },
+ {
+  "id": 4,
+  "name": "Mayerly Carrillo",
+  "password": "$2a$10$IGTaaKOTJbaGxmvHuUsoEOw8lRwqQmXSAdDFjCvNdUXt0cZDrynKO",
+  "email": "mmaller67@gmail.com",
+  "country": "Colombia",
+  "image": "default-user-image.png"
+ },
+ {
+  "id": 5,
+  "name": "Mayerly Carrillo",
+  "password": "$2a$10$ubaNmMe98mNdUuzsLwycPeuZqLlqAzBFsHSfyhr0r9Xl1Wth4gaEC",
+  "email": "mayecarriqui@hotmail.com",
+  "country": "Spain",
+  "image": "1683377525884.jpeg"
  }
 ]
