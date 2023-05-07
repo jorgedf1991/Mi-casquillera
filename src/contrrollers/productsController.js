@@ -11,7 +11,7 @@ const controller = {
 
     productDetail : (req, res) =>{
         const productDetail = getData();
-        res.render('productDetails', { productDetail });
+        res.render('productList', { productDetail });
     },
 
     formCreate: (req, res) => {
@@ -35,25 +35,27 @@ const controller = {
             }
             products.push(newProduct);
             fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-            res.redirect('/product/details');
+            res.redirect('/product/detail');
         } catch (error) {
             console.log(error);
         }
     },
+
     formEdit: (req, res) => {
         try {
             const { id } = req.params;
             const products = getData();
-            const productsId = products.find(product => product.id === +id);
-            res.render('formEdit', { productsId });
+            const product = products.find(product => product.id === +id);
+            res.render('productEdit', { product });
         } catch (error) {
             console.log(error);
         }
     },
+
     update: (req, res) => {
         const { id } = req.params;
         const products = getData();
-        const productsIndex = products.findIdenx(product => product.id === +id);
+        const productsIndex = products.findIndex(product => product.id === +id);
         const image = req.file ? req.file.filename : products[productsIndex].image;
         products[productsIndex] = {
             ...products[productsIndex],
@@ -63,14 +65,14 @@ const controller = {
             image: image
         }
         fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-        res.redirect('/detailsProduct');
+        res.redirect('/product/details');
     },
 
     delete: (req, res) => {
         try {
             const { id } = req.params;
             const products = getData();
-            const productsIndex = products.findIdenx(product => product.id === +id);
+            const productsIndex = products.findIndex(product => product.id === +id);
             products.splice(productsIndex, 1);
             fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
             res.redirect('/details');

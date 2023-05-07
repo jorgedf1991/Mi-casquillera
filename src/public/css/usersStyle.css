@@ -1,29 +1,33 @@
-#list-user {
+/* #list-user {
     display: flex;
     text-align: center;
     margin: 60px;
-}
+} */
 
-div #box-profile-users {
+div #box-profile-users, div #box-profile-product{
     background: white;
     margin: 10px;
     padding: 10px;
     justify-content: space-evenly;
     display: inline-block;
-    width: 91%;
+    width: 87%;
     box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
         0px 1px white inset, 0px -3px 2px #47361A inset;
 
 }
 
-.profile-users {
-    margin: 10px;
-    padding: 0px;
-    display: block;
-    width: 92%;
+.panel-users a{
+    text-decoration: none;
 }
 
-.profile-users img {
+.profile-users, .profile-product {
+    margin: 10px;
+    display: block;
+    width: 87%;
+    overflow: hidden;
+}
+
+.profile-users img, .profile-product img{
     width: 90%;
     background: #f4f7f4;
     display: block;
@@ -40,7 +44,7 @@ div #box-profile-users {
         text-align: center;
     }
 
-    div #box-profile-users {
+    div #box-profile-users, div #box-profile-product{
         background: white;
         margin: 10px;
         padding: 10px;
@@ -52,14 +56,14 @@ div #box-profile-users {
 
     }
 
-    .profile-users {
+    .profile-users, .profile-product{
         margin: 10px;
         padding: 0px;
         display: block;
         width: 90%;
     }
 
-    .profile-users img {
+    .profile-users img, .profile-product img{
         width: 90%;
         background: #f4f7f4;
         display: block;
@@ -75,7 +79,7 @@ div #box-profile-users {
         text-align: center;
     }
 
-    div #box-profile-users {
+    div #box-profile-users, div #box-profile-product {
         background: white;
         margin: 20px;
         padding: 10px;
@@ -87,14 +91,14 @@ div #box-profile-users {
 
     }
 
-    .profile-users {
+    .profile-users, .profile-product{
         margin: 5px;
         padding: 0px;
         display: block;
         width: 90%;
     }
 
-    .profile-users img {
+    .profile-users img, .profile-product img{
         width: 95%;
         background: #f4f7f4;
         display: block;
@@ -111,7 +115,7 @@ div #box-profile-users {
         text-align: center;
     }
 
-    div #box-profile-users {
+    div #box-profile-users, div #box-profile-product{
         background: white;
         margin: 20px;
         padding: 10px;
@@ -123,14 +127,14 @@ div #box-profile-users {
 
     }
 
-    .profile-users {
+    .profile-users, .profile-product{
         margin: 5px;
         padding: 0px;
         display: block;
         width: 90%;
     }
 
-    .profile-users img {
+    .profile-users img, .profile-product img{
         width: 95%;
         background: #f4f7f4;
         display: block;

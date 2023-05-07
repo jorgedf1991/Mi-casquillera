@@ -1,5 +1,4 @@
 [
- {},
  {
   "id": 1,
   "name": "fanta",
@@ -11,7 +10,7 @@
   "id": 2,
   "name": "Pitufo",
   "price": "1222",
-  "description": "asasasasss",
+  "description": "un enano",
   "image": "default-user-image.png"
  },
  {
