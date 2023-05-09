@@ -40,10 +40,13 @@ Integrantes:
 1.Gabriel Jaime Arroyave, edad 47 años y, soy de Medellín Colombia 
 2.Esteban Nicolas Narvaez, edad 22 años, soy de Santa Fe, Argentina
 3.Yohana Sanchez Quintero, edad 26 años, Medellin, Colombia
-4.Jorge Diaz, Bogota, Colombia
+4.Jorge Diaz,  tengo 31 años Bogota, Colombia
 5.Iara Catalina Mora, edad 24 años, Ciudad Autonoma de Buenos Aires, Argentina
 6.Fernando Ogando, vivo en Capital Federal, Argentina, tengo 44 años.
 7.Mayerly Carrillo, tengo 32 años y soy de Cúcuta,Colombia.
 
 Tablero que Utilizamos:"Trello"
 Link:https://trello.com/b/taxEChOV/proyecto-casquillera
+
+Antiguo link GitHub:
+https://github.com/jorgedf1991/proyecto_integrador_gp7
