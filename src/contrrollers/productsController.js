@@ -1,5 +1,10 @@
 const path = require('path');
 const fs = require('fs');
+const db = require('../database/models');
+const User = require('../database/models/User');
+
+const user = db.User;
+const product = db.Product;
 
 const pathProduct = path.join(__dirname, '../data/productsData.json');
 
@@ -23,22 +28,30 @@ const controller = {
     },
 
     store: (req, res) => {
-        try {
+        
             const image = req.file ? req.file.filename : 'default-user-image.png';
-            const products = getData();
-            const newProduct = {
-                id: products[products.length - 1].id + 1,
-                name: req.body.name,
+            // const products = getData();
+            // const newProduct = {
+            //     id: products[products.length - 1].id + 1,
+            //     name: req.body.name,
+            //     price: req.body.price,
+            //     description: req.body.description,
+            //     image: image
+            // }
+            // products.push(newProduct);
+            // fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
+            // res.send(req.body);
+             db.Product.create({
+                 name: req.body.name,
                 price: req.body.price,
-                description: req.body.description,
-                image: image
-            }
-            products.push(newProduct);
-            fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-            res.redirect('/product/detail');
-        } catch (error) {
-            console.log(error);
-        }
+                 description: req.body.description,
+                 image: image
+             })
+             .then(()=>{
+               res.redirect('/product');
+             })
+             .catch(error => res.send(error));
+        
     },
 
     formEdit: (req, res) => {

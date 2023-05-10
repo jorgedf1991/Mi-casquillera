@@ -1,6 +1,7 @@
 module.exports = (sequelize, dataTypes)=>{
 
     let alias = "User";
+
     let cols = {
         id : {
             type: dataTypes.INTEGER(10).UNSIGNED,
@@ -25,7 +26,8 @@ module.exports = (sequelize, dataTypes)=>{
         },
 
         avatar : {
-
+            type: dataTypes.STRING(500),
+            allowNull: false
         },
 
         email : {
@@ -47,13 +49,16 @@ module.exports = (sequelize, dataTypes)=>{
         };
     
 
-    const User = sequelize.define(alias, cols, config);
+    const User = sequelize.define(alias,cols,config);
+
     User.associate = function (models) {
-        User.belongsTo(models.roles, { 
+        User.belongsTo(models.Rol, {
             as: "roles",
             foreignKey: "roles_id"
         })
     }
+
+   
     
     return  User;
 }

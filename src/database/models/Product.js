@@ -3,7 +3,7 @@ module.exports = (sequelize, dataTypes)=>{
     let alias = "Product";
     let cols = {
         id : {
-            type: dataTypes.INTEGER(10).UNSIGNED,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true 
@@ -26,17 +26,16 @@ module.exports = (sequelize, dataTypes)=>{
     };
     
         let config = {
-            timestamps: true,
-            createdAt: 'created_at',
-            updatedAt: 'updated_at',
-            tableName: 'product'
+            timestamps: false,
+            tableName: 'products',
+            deleteAt: false
         };
     
 
     const Product = sequelize.define(alias, cols, config);
 
     Product.associate = function (models) {
-        User.belongsTo(models.categories, { 
+        Product.belongsTo(models.Category, { 
             as: "categories",
             foreignKey: "categories_id"
         })
