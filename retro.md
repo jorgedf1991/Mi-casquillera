@@ -38,3 +38,14 @@ Conclusiones del Sprint 5:
 *Hacer menos: El no informar en lo que estamos trabajando.
 
 *Seguir Haciendo: Buscar entregar en tiempo las tareas del Sprint.
+
+conclusiones del Sprint 6:
+
+*comenzar a hacer: tratar de tener mas comunicacion ya que no estamos sacando el tiempo necesario para el proyecto, tener mas dialogo y coordinacion.
+
+*Hacer mas: dialogar mas, tener mas encuentros entre nosotros y dejas los puntos claros de cada Sprint.
+
+*Hacer menos: procrastinar con las tareas del sprin
+
+*Seguir haciendo: tener la serenidad en el grupo, entregar los proximos sprint a tiempo.
+
