@@ -15,8 +15,12 @@ function getData() {
 const controller = {
 
     productDetail : (req, res) =>{
-        const productDetail = getData();
-        res.render('productList', { productDetail });
+        // const productDetail = getData();
+        // res.render('productList', { productDetail });
+
+        db.Product.findAll().then(productDetail => {
+            res.render('productList', { productDetail });
+        })
     },
 
     formCreate: (req, res) => {
