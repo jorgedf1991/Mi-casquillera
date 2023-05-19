@@ -14,9 +14,23 @@ function getData() {
 
 const controller = {
 
-    productDetail : (req, res) =>{
+    //prueba
+    productDetail1: (req, res) => {
+        const { id } = req.params;
         const productDetail = getData();
+        const productId = productDetail.find(product => product.id === +id);
         res.render('productList', { productDetail });
+        // res.render('beer');
+    },
+
+    //fin prueba
+
+    productDetail: (req, res) => {
+        const { id } = req.params;
+        const productDetail = getData();
+        const productId = productDetail.find(product => product.id === +id);
+        //  res.render('productList', { productDetail });
+        res.render('beer', { productId });
     },
 
     formCreate: (req, res) => {
@@ -28,30 +42,30 @@ const controller = {
     },
 
     store: (req, res) => {
-        
-            const image = req.file ? req.file.filename : 'default-user-image.png';
-            // const products = getData();
-            // const newProduct = {
-            //     id: products[products.length - 1].id + 1,
-            //     name: req.body.name,
-            //     price: req.body.price,
-            //     description: req.body.description,
-            //     image: image
-            // }
-            // products.push(newProduct);
-            // fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-            // res.send(req.body);
-             db.Product.create({
-                 name: req.body.name,
-                price: req.body.price,
-                 description: req.body.description,
-                 image: image
-             })
-             .then(()=>{
-               res.redirect('/product');
-             })
-             .catch(error => res.send(error));
-        
+
+        const image = req.file ? req.file.filename : 'default-user-image.png';
+        // const products = getData();
+        // const newProduct = {
+        //     id: products[products.length - 1].id + 1,
+        //     name: req.body.name,
+        //     price: req.body.price,
+        //     description: req.body.description,
+        //     image: image
+        // }
+        // products.push(newProduct);
+        // fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
+        // res.send(req.body);
+        db.Product.create({
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description,
+            image: image
+        })
+            .then(() => {
+                res.redirect('/product');
+            })
+            .catch(error => res.send(error));
+
     },
 
     formEdit: (req, res) => {

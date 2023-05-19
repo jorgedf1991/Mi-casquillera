@@ -5,12 +5,12 @@ const uploadFile= require('../middlewares/multerMiddleware');
 
 const router = express.Router();
 
-router.get('/', productsController.productDetail);
+router.get('/', productsController.productDetail1);
 
 router.get('/create', productsController.formCreate);
 router.post('/create', uploadFile.single('imageProduct'), productsController.store);
 
-router.get('/details', productsController.productDetail);
+router.get('/details/:id', productsController.productDetail);
 
 router.get('/edit/:id', productsController.formEdit);
 router.put('/edit/:id',uploadFile.single('imageProduct'), productsController.update);

@@ -454,8 +454,8 @@ aside h3:first-child {
 
 #articles #container-products .box-product {
   width: 46%;
-  height: 317px;
-  margin: 3px;
+  height: 500px;
+  margin: 5px;
   border: 1px solid gray;
   background: #FFEDD2;
 }
@@ -468,7 +468,7 @@ div .box-img {
 
 #articles #container-products img {
   width: 61%;
-  height: 140px;
+  height: 260px;
   margin-bottom: 16px;
   margin-top: 10px;
 }
@@ -640,4 +640,80 @@ div .box-img {
 
 #footer #browsers img {
   width: 45px;
+}
+
+/*Nuevo*/
+#cerveza {
+  text-align: center;
+}
+
+.titulo {
+  margin-top: 50px;
+}
+
+#cerveza #contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-imagen {
+  width: 350px;
+  height: 550px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.profile-name {
+  font-size: 3em;
+  font-family: fantasy;
+}
+
+#cerveza .profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.profile-button {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+button {
+  text-align: center;  
+  margin-top: 20px;
+  color: white;
+  background: linear-gradient(to bottom, #FDB825 0%, #FDB825 100%);
+  border: 1px solid #FDB825;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2em;
+  font-family: "Candara";
+  font-weight: lighter;
+  margin-left: 17px;
+  margin-bottom: 20px;
+  transition: all 300ms;
+}
+
+.profile-otras{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-otras-cervezas{
+  width: 100px;
+  height: 225px;
+  margin: 10px;
+  transition: all 1s;
+  
+}
+
+.profile-otras-cervezas:hover{
+  transform: scale(1.1);
 }
