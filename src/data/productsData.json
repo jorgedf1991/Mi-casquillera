@@ -8,9 +8,15 @@
  },
  {
   "id": 2,
+<<<<<<< HEAD
   "name": "Pitufo  6",
   "price": "25000",
   "description": "fghfghf",
+=======
+  "name": "coca cola",
+  "price": "2500",
+  "description": "gaseosa 1 litro",
+>>>>>>> 717778c641b3471b7d84797cdcc3faa57c88d42f
   "image": "default-user-image.png"
  },
  {

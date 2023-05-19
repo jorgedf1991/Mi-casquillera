@@ -10,6 +10,10 @@ body {
     background-color: #fcad03;
     color: #fff;
     height: 75px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 .menu h1{
