@@ -15,4 +15,6 @@ router.get('/details/:id', productsController.productDetail);
 router.get('/edit/:id', productsController.formEdit);
 router.put('/edit/:id',uploadFile.single('imageProduct'), productsController.update);
 
+router.delete('/delete/:id', productsController.delete);
+
 module.exports = router;

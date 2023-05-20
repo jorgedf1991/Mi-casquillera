@@ -37,8 +37,11 @@ body {
  .wrap {
    width: 1200px;
    margin: 0 auto;
-   margin-top: 124px;
   } 
+
+  .wrap-banner{
+    padding: 105px;
+  }
 
 .gear,
 .icon {
@@ -454,8 +457,8 @@ aside h3:first-child {
 }
 
 #articles #container-products .box-product {
-  width: 46%;
-  height: 500px;
+  width: 45%;
+  /* height: 500px; */
   margin: 5px;
   border: 1px solid gray;
   background: #FFEDD2;

@@ -15,6 +15,9 @@ div #box-profile-users, div #box-profile-product{
         0px 1px white inset, 0px -3px 2px #47361A inset;
 
 }
+.panel-users{
+    padding: 124px;
+}
 
 .panel-users a{
     text-decoration: none;

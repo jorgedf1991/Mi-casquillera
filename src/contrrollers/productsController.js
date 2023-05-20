@@ -102,7 +102,7 @@ const controller = {
             const productsIndex = products.findIndex(product => product.id === +id);
             products.splice(productsIndex, 1);
             fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-            res.redirect('/details');
+            res.redirect('/product');
         } catch (error) {
             console.log(error);
         }
