@@ -10,27 +10,33 @@
             <!--Fin cabecera-->
             <div id="formRegister">
                 <div id="box-form">
-                    <form action="/user/create" method="post" enctype="multipart/form-data">
+                    <ul class="errores"></ul>
+                    <form action="/user/create" method="post" enctype="multipart/form-data" class="validationFrontend">
                         <div class="box-register">
-                            <input type="text" name="name" placeholder="Indica tu nombre" value="<%= locals.oldData ? oldData.name : null%>">
+                            <input type="text" name="name" id="name" placeholder="Indica tu nombre" value="<%= locals.oldData ? oldData.name : null%>">
+                            <p class="error-message" id="error-name"></p>
                             <% if (locals.errors && errors.name) { %>
                                 <div class="error-validation">
+                                   
                                     <%= errors.name.msg %>
                                 </div> 
                                 <% } %>
                         </div>
 
                         <div class="box-register">
-                            <input type="password" name="password" placeholder="Indica tu password">
+                            <input type="password" name="password" id= 'password' placeholder="Indica tu password">
+                            <p class="error-message" id="error-password"></p>
                             <% if (locals.errors && errors.password) { %>
                                 <div class="error-validation">
+                                    
                                     <%= errors.password.msg %>
                                 </div> 
                                 <% } %>
                         </div>
 
                         <div class="box-register">
-                            <input type="email" name="email"  placeholder="Indica tu email" value="<%= locals.oldData ? oldData.email : null%>">
+                            <input type="email" name="email" id="email" placeholder="Indica tu email" value="<%= locals.oldData ? oldData.email : null%>">
+                            <p class="error-message" id="error-email"></p>
                             <% if (locals.errors && errors.email) { %>
                                 <div class="error-validation">
                                     <%= errors.email.msg %>
@@ -39,7 +45,7 @@
                         </div>
 
                         <div class="box-register">
-                            <select name="select" id="">
+                            <select name="select" id="select">
                                 <% countries.forEach(country => { %>
                                  <option><%= country.name.common %></option>
                                 <% }) %>
@@ -48,14 +54,14 @@
                         <div class="box-imageUsers">
                             <h3>Sube tu foto</h3>
                             <div class="box-register">
-                                <input type="file" name="imageUsers">
+                                <input type="file" name="imageUsers" id="imageUsers">
                             </div>
                         </div>
 
                         <div class="box-register">
                             <div class="box-button">
-                                <button type="submit">Crear</button>
-                                <button type="reset">Borrar</button>
+                                <button id= 'buttonCreate'  type="submit">Crear</button>
+                                <button id= 'buttonDelete' type="reset">Borrar</button>
                             </div>
                         </div>
 
@@ -70,6 +76,7 @@
 
                 <!--Script-->
                 <script src="/js/navScript.js"></script>
+                <script src="/js/formRegisterScript.js"></script>
     </body>
 
 </html>
