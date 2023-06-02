@@ -10,17 +10,20 @@
            
             <div id="formRegister">
                 <div id="box-form">
-                    <form action="/product/create" method="post" enctype="multipart/form-data">
+                    <form action="/product/create" method="post" enctype="multipart/form-data" class="validation_product_create">
                         <div class="box-register">
                             <input type="text" name="name" placeholder="Nombre del product">
+                            <p class="error-message" id="error-name"></p>
                         </div>
 
                         <div class="box-register">
                             <input type="number" name="price" placeholder="Indica un precio">
+                            <p class="error-message" id="error-price"></p>
                         </div>
 
                         <div class="box-register">
                             <textarea name="description"  cols="30" rows="10"></textarea>
+                            <p class="error-message" id="error-description"></p>
                         </div>
 
                         <div class="box-imageUsers">
@@ -49,6 +52,7 @@
 
                 <!--Script-->
                 <script src="/js/navScript.js"></script>
+                <script src="/js/formCreateProductScript.js"></script>
     </body>
 
 </html>

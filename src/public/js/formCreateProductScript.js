@@ -1,11 +1,10 @@
 window.addEventListener('load', function () {
     
-    const form = document.querySelector('form.validationFrontend');
+    const form = document.querySelector('form.validation_product_create');
     form.name.focus();
     
     form.addEventListener('submit', (e) => {
-        
-        // e.preventDefault();
+        e.preventDefault();
 
         const allErrorLabels = document.querySelectorAll('.error-message');
         allErrorLabels.forEach(element => {
@@ -15,26 +14,26 @@ window.addEventListener('load', function () {
         const errors = [];
 
         if (!form.name.value) {
-            errors.push({ name: 'name', message: 'Este campo no puede estar vacio' });
+            errors.push({ name: 'name', message: 'Debes completar este campo' });
             form.name.classList.add('is-invalid');
         } else {
             form.name.classList.remove('is-invalid');
             form.name.classList.add('is-valid');
         }
-        if (!form.password.value) {
-            errors.push({ name: 'password', message: 'Este Campo no puede estar vacio' })
-            form.password.classList.add('is-invalid');
+        if (!form.price.value) {
+            errors.push({ name: 'price', message: 'Debes completar este campo' })
+            form.price.classList.add('is-invalid');
         } else {
-            form.password.classList.remove('is-invalid');
-            form.password.classList.add('is-valid');
+            form.price.classList.remove('is-invalid');
+            form.price.classList.add('is-valid');
         }
 
-        if (!form.email.value) {
-            errors.push({ name: 'email', message: 'Este Campo no puede estar vacio' })
-            form.email.classList.add('is-invalid');
+        if (!form.description.value) {
+            errors.push({ name: 'description', message: 'Debes completar este campo' })
+            form.description.classList.add('is-invalid');
         } else {
-            form.email.classList.remove('is-invalid');
-            form.email.classList.add('is-valid');
+            form.description.classList.remove('is-invalid');
+            form.description.classList.add('is-valid');
         }
 
         errors.forEach(error => {
@@ -45,19 +44,6 @@ window.addEventListener('load', function () {
             form.submit();
         }
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 })
