@@ -37,8 +37,11 @@ body {
  .wrap {
    width: 1200px;
    margin: 0 auto;
-   margin-top: 124px;
   } 
+
+  .wrap-banner{
+    padding: 105px;
+  }
 
 .gear,
 .icon {
@@ -409,28 +412,26 @@ aside h3:first-child {
 
 /*ARTICULOS*/
 #articles {
-  width: 860px;
-  float: left;
+  
+  background: white;
 }
 
-#articles h2 {
+ .title-index{
   display: block;
-  width: 95%;
-  height: 75px;
-  line-height: 75px;
-  text-align: center;
-  font-family: "BebasNeue";
-  font-size: 40px;
-  font-weight: normal;
-  letter-spacing: 2px;
-  background: url(../img/pxgray.png), white;
-  box-shadow: 0px 1px 0px #393d3f, 1px 2px #393d3f, 2px 3px 0px #393d3f,
-    3px 4px 0px #393d3f;
-  margin: 0px auto;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  color: #47361A;
-  margin-left: 15px;
+    width: 92%;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 23px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background: url(../img/pxgray.png), white;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #47361A;
 }
 
 #articles article {
@@ -449,16 +450,19 @@ aside h3:first-child {
   width: 97%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin-left: 5px;
+  
 }
 
 #articles #container-products .box-product {
-  width: 46%;
-  height: 317px;
+  width: 45%;
+  /* height: 500px; */
   margin: 3px;
   border: 1px solid gray;
   background: #FFEDD2;
+  box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
+  0px 1px white inset, 0px -3px 2px #47361A inset;
 }
 
 div .box-img {
@@ -469,7 +473,7 @@ div .box-img {
 
 #articles #container-products img {
   width: 61%;
-  height: 140px;
+  height: 260px;
   margin-bottom: 16px;
   margin-top: 10px;
 }
@@ -485,16 +489,21 @@ div .box-img {
 .box-details .name-product a {
   color: #47361A;
   text-decoration: none;
+  font-size: 15px;
 }
 
 .box-details .name-product:hover a {
   text-decoration: underline;
 }
 
+
 .box-details .descrption-product {
+  display: block;
   height: 70px;
-  overflow: hidden;
+  overflow: hidden; 
 }
+
+
 
 .box-details .name-product,
 .price-product,
@@ -641,4 +650,80 @@ div .box-img {
 
 #footer #browsers img {
   width: 45px;
+}
+
+/*Nuevo*/
+#cerveza {
+  text-align: center;
+}
+
+.titulo {
+  margin-top: 50px;
+}
+
+#cerveza #contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-imagen {
+  width: 350px;
+  height: 550px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.profile-name {
+  font-size: 3em;
+  font-family: fantasy;
+}
+
+#cerveza .profile-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.profile-button {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+button {
+  text-align: center;  
+  margin-top: 20px;
+  color: white;
+  background: linear-gradient(to bottom, #FDB825 0%, #FDB825 100%);
+  border: 1px solid #FDB825;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2em;
+  font-family: "Candara";
+  font-weight: lighter;
+  margin-left: 17px;
+  margin-bottom: 20px;
+  transition: all 300ms;
+}
+
+.profile-otras{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-otras-cervezas{
+  width: 100px;
+  height: 225px;
+  margin: 10px;
+  transition: all 1s;
+  
+}
+
+.profile-otras-cervezas:hover{
+  transform: scale(1.1);
 }

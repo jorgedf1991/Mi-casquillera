@@ -9,6 +9,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 const router = express.Router();
+router.get('/perfil', userController.userProfile);
 
 router.get('/create',guestMiddleware ,userController.form);
 router.post('/create',uploadFile.single('imageUsers'),validatorRegister.registerValidator,userController.create);

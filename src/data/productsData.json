@@ -1,12 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "fanta",
-  "price": "1200",
-  "description": "gaseosa",
-  "image": "1681263571568.png"
- },
- {
   "id": 2,
   "name": "coca cola",
   "price": "2500",

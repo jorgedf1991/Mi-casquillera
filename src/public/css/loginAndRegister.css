@@ -33,11 +33,16 @@
 #formRegister {
   display: flex;
   justify-content: center;
+<<<<<<< HEAD
   margin-top: 100px;
+=======
+  margin-top: 124px;
+>>>>>>> main
   margin-bottom: 15px;
 }
 
 #box-form {
+  width: 40%;
   margin: 10px;
   background: white;
   box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
@@ -59,6 +64,9 @@ select {
 
 .box-register input[type="file"] {
   font-size: 11px;
+}
+.box-button{
+  text-align: center;
 }
 
 .box-button button[type="submit"],

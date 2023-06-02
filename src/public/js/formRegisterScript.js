@@ -8,7 +8,8 @@ window.addEventListener('load', function () {
     
     form.name.focus();
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
+        
+        // e.preventDefault();
 
         const allErrorLabels = document.getElementsByClassName('error-message');
          allErrorLabels.forEach(element => {

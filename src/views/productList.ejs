@@ -11,8 +11,8 @@
            
             <div id="list-user">
                 <div class="panel-users">
-                    <a href="">
-                        <% productDetail.forEach((product) => {%>
+                    <% products.forEach((product) => {%>
+                        <a href="/product/details/<%=product.id%>">
                             <div id="box-profile-product">
                                 <div class="profile-product">
                                   <img src="/img/imageUsers/<%=product.image %>" alt="">  
