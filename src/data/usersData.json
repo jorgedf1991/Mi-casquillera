@@ -38,5 +38,13 @@
   "email": "mayecarriqui@hotmail.com",
   "country": "Spain",
   "image": "1683377525884.jpeg"
+ },
+ {
+  "id": 6,
+  "name": "mayerly",
+  "password": "$2a$10$C7y7gxEC6SNrWx.A13jQ8uJ5x8Q7jTQRf3JlOHoPYmKpBV2kqEHnG",
+  "email": "mcarrilloq@eafit.edu.co",
+  "country": "Andorra",
+  "image": "default-user-image.png"
  }
 ]
