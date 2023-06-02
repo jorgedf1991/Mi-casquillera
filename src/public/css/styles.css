@@ -412,28 +412,26 @@ aside h3:first-child {
 
 /*ARTICULOS*/
 #articles {
-  width: 860px;
-  float: left;
+  
+  background: white;
 }
 
-#articles h2 {
+ .title-index{
   display: block;
-  width: 95%;
-  height: 75px;
-  line-height: 75px;
-  text-align: center;
-  font-family: "BebasNeue";
-  font-size: 40px;
-  font-weight: normal;
-  letter-spacing: 2px;
-  background: url(../img/pxgray.png), white;
-  box-shadow: 0px 1px 0px #393d3f, 1px 2px #393d3f, 2px 3px 0px #393d3f,
-    3px 4px 0px #393d3f;
-  margin: 0px auto;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  color: #47361A;
-  margin-left: 15px;
+    width: 92%;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    font-family: "BebasNeue";
+    font-size: 23px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    background: url(../img/pxgray.png), white;
+    box-shadow: 0px 1px 0px #393d3f, 1px 2px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #47361A;
 }
 
 #articles article {
@@ -452,16 +450,19 @@ aside h3:first-child {
   width: 97%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   margin-left: 5px;
+  
 }
 
 #articles #container-products .box-product {
   width: 45%;
   /* height: 500px; */
-  margin: 5px;
+  margin: 3px;
   border: 1px solid gray;
   background: #FFEDD2;
+  box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
+  0px 1px white inset, 0px -3px 2px #47361A inset;
 }
 
 div .box-img {
@@ -488,16 +489,21 @@ div .box-img {
 .box-details .name-product a {
   color: #47361A;
   text-decoration: none;
+  font-size: 15px;
 }
 
 .box-details .name-product:hover a {
   text-decoration: underline;
 }
 
+
 .box-details .descrption-product {
+  display: block;
   height: 70px;
-  overflow: hidden;
+  overflow: hidden; 
 }
+
+
 
 .box-details .name-product,
 .price-product,

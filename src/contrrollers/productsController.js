@@ -1,7 +1,6 @@
 const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
-const User = require('../database/models/User');
 
 const user = db.User;
 const product = db.Product;
@@ -15,22 +14,34 @@ function getData() {
 const controller = {
 
     //prueba
-    productDetail1: (req, res) => {
-        const { id } = req.params;
-        const productDetail = getData();
-        const productId = productDetail.find(product => product.id === +id);
-        res.render('productList', { productDetail });
-        // res.render('beer');
+    product: (req, res) => {
+        // const { id } = req.params;
+        // const productDetail = getData();
+        // const productId = productDetail.find(product => product.id === +id);
+        // res.render('productList', { productDetail });
+        db.Product.findAll({
+
+        })
+            .then(products => {
+                res.render('productList', { products })
+            })
     },
 
     //fin prueba
 
     productDetail: (req, res) => {
-        const { id } = req.params;
-        const productDetail = getData();
-        const productId = productDetail.find(product => product.id === +id);
-        //  res.render('productList', { productDetail });
-        res.render('beer', { productId });
+        // const { id } = req.params;
+        // const productDetail = getData();
+        // const productId = productDetail.find(product => product.id === +id);
+        // //  res.render('productList', { productDetail });
+        // res.render('beer', { productId });
+        db.Product.findByPk(req.params.id,
+            {
+
+            })
+            .then(productId => {
+                res.render('beer', { productId });
+            })
     },
 
     formCreate: (req, res) => {
@@ -69,43 +80,71 @@ const controller = {
     },
 
     formEdit: (req, res) => {
-        try {
-            const { id } = req.params;
-            const products = getData();
-            const product = products.find(product => product.id === +id);
-            res.render('productEdit', { product });
-        } catch (error) {
-            console.log(error);
-        }
+        // try {
+        //     const { id } = req.params;
+        //     const products = getData();
+        //     const product = products.find(product => product.id === +id);
+        //     res.render('productEdit', { product });
+        // } catch (error) {
+        //     console.log(error);
+        // }
+        db.Product.findByPk(req.params.id,
+            {
+
+            })
+            .then(product => {
+                res.render('productEdit', { product });
+            })
     },
 
     update: (req, res) => {
-        const { id } = req.params;
-        const products = getData();
-        const productsIndex = products.findIndex(product => product.id === +id);
-        const image = req.file ? req.file.filename : products[productsIndex].image;
-        products[productsIndex] = {
-            ...products[productsIndex],
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            image: image
-        }
-        fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-        res.redirect('/product/details');
+        // const { id } = req.params;
+        // const products = getData();
+        // const productsIndex = products.findIndex(product => product.id === +id);
+        // const image = req.file ? req.file.filename : products[productsIndex].image;
+        // products[productsIndex] = {
+        //     ...products[productsIndex],
+        //     name: req.body.name,
+        //     price: req.body.price,
+        //     description: req.body.description,
+        //     image: image
+        // }
+        // fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
+        // res.redirect('/product/details');
+        let productId = req.params.id;
+        db.Product.update(
+            {
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                image: image
+            },
+            {
+                where: { id: productId }
+            })
+            .then(() => {
+                return res.redirect('/product')
+            })
+            .catch(error => res.send(error))
     },
 
     delete: (req, res) => {
-        try {
-            const { id } = req.params;
-            const products = getData();
-            const productsIndex = products.findIndex(product => product.id === +id);
-            products.splice(productsIndex, 1);
-            fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-            res.redirect('/product');
-        } catch (error) {
-            console.log(error);
-        }
-    }
+    //     try {
+    //         const { id } = req.params;
+    //         const products = getData();
+    //         const productsIndex = products.findIndex(product => product.id === +id);
+    //         products.splice(productsIndex, 1);
+    //         fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
+    //         res.redirect('/product');
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    
+        let productId = req.params.id;
+        db.Product.destroy({where: {id: productId}, force: true})
+        .then(()=>{
+            return res.redirect('/product')})
+        .catch(error => res.send(error))
+     }
 }
 module.exports = controller;

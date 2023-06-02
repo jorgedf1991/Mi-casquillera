@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('partials/head.ejs', {title: 'Perfil de usuario' }) %>
+
+    <body>
+        <!--Inicio cabecera-->
+        <%- include('partials/header.ejs') %>
+            <!--Fin cabecera-->
+
+            <section class="wrap wrap-content wrap-banner profile-user">
+
+                <div id="container-profile">
+                    <h2 class="title">Bienvenido Usuario</h2>
+                    <img class="img-profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                        alt="Foto de perfil">
+                    <div class="panel-profile">
+                        <p class="rol">Rol: Admin</p>
+                        <p class="country">Pais: Colombia</p>
+                    </div>
+                    <div class="button-profile">
+                        <button >Editar perfil</button>
+                    </div>
+                </div>
+
+            </section>
+            <!--Inicio Footer-->
+            <div class="clearfix"></div>
+            <%- include('partials/footer.ejs') %>
+
+                <!--Inicio Footer-->
+
+
+                <!--Script-->
+                <script src="/js/navScript.js"></script>
+    </body>
+
+</html>

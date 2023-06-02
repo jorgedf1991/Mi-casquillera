@@ -1,8 +1,4 @@
-/* #list-user {
-    display: flex;
-    text-align: center;
-    margin: 60px;
-} */
+
 
 div #box-profile-users, div #box-profile-product{
     background: white;
@@ -41,6 +37,41 @@ div #box-profile-users, div #box-profile-product{
 
 }
 
+/*Inicio  Perfil Usuario*/
+
+.profile-user{
+display: flex;
+justify-content: center;
+}
+
+#container-profile{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    background: white;
+    margin: 6px;
+    padding: 13px;
+    box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A, 0px 1px white inset, 0px -3px 2px #47361A inset;
+}
+
+#container-profile h2{
+    margin-bottom: 15px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#container-profile .panel-profile{
+    margin-top: 20px;
+    margin-left: 5px;
+}
+#container-profile .button-profile{
+    text-align: center;
+}
+
+
+/*Fin perfil Usuario*/
+
+
 @media (min-width: 768px) {
     #list-user {
         display: flex;
@@ -77,6 +108,13 @@ div #box-profile-users, div #box-profile-product{
 }
 
 @media (min-width: 1024px) {
+    #container-profile{
+        width: 40%;
+    }
+    #container-profile img{
+        width: 400px;
+    }
+    
     #list-user {
         display: flex;
         text-align: center;

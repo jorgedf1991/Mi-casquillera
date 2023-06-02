@@ -11,6 +11,10 @@ function getData() {
 }
 
 const contrrollers = {
+    userProfile: (req, res) =>{
+        
+        res.render('userProfile', )
+    },
 
     form:  (req, res) => {
         fetch('https://restcountries.com/v3.1/all')
