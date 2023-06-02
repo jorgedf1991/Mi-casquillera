@@ -13,20 +13,23 @@
                     <form action="/product/edit/<%=product.id%>?_method=PUT" method="post" enctype="multipart/form-data">
                         <div class="box-register">
                             <input type="text" name="name" value="<%= product.name %>">
+                            <p class="error-message" id="error-name"></p>
                         </div>
 
                         <div class="box-register">
                             <input type="number" name="price" value="<%= product.price %>">
+                            <p class="error-message" id="error-price"></p>
                         </div>
 
                         <div class="box-register">
                             <textarea name="description"  cols="30" rows="10" ><%= product.description %></textarea>
+                            <p class="error-message" id="error-description"></p>
                         </div>
 
                         <div class="box-imageUsers">
                             <h3>Foto del producto</h3>
                             <div class="box-register">
-                                <input type="file" name="imageProduct" value="<%=product.image %>">
+                                <input type="file" name="imageProduct" value="<%=product.image %>">                                
                             </div>
                         </div>
 
@@ -48,6 +51,7 @@
 
                 <!--Script-->
                 <script src="/js/navScript.js"></script>
+                <script src="/js/formUpdateProducts.js"></script> 
     </body>
 
 </html>
