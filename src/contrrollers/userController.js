@@ -11,17 +11,17 @@ function getData() {
 }
 
 const contrrollers = {
-    userProfile: (req, res) =>{
-        
-        res.render('userProfile', )
+    userProfile: (req, res) => {
+
+        res.render('userProfile',)
     },
 
-    form:  (req, res) => {
+    form: (req, res) => {
         fetch('https://restcountries.com/v3.1/all')
-        .then(response => response.json())
-        .then(countries => {
-           return res.render('formRegister', { countries });
-        })
+            .then(response => response.json())
+            .then(countries => {
+                return res.render('formRegister', { countries });
+            })
 
     },
 
@@ -29,17 +29,17 @@ const contrrollers = {
         const errors = validationResult(req);
         const users = getData();
         const countries = await fetch('https://restcountries.com/v3.1/all').then(response => response.json());
-        if(errors.isEmpty()){
+        if (errors.isEmpty()) {
             const existingUser = users.find(user => user.email === req.body.email);
-            if(existingUser){
+            if (existingUser) {
                 return res.render('formRegister', {
-                  countries,
-                    errors : {
-                         email: {
-                             msg: "El email ya se encuentra registrado" 
-                            } 
-                        }, oldData: req.body 
-                    });
+                    countries,
+                    errors: {
+                        email: {
+                            msg: "El email ya se encuentra registrado"
+                        }
+                    }, oldData: req.body
+                });
             } else {
                 const image = req.file ? req.file.filename : 'default-user-image.png';
                 const passEncriptada = bcrypt.hashSync(req.body.password, 10)
@@ -52,55 +52,59 @@ const contrrollers = {
                     image: image
                 };
                 users.push(newUser);
-            fs.writeFileSync(userFilePath, JSON.stringify(users, null, ' '));
-            res.redirect('/user/listUser');
+                fs.writeFileSync(userFilePath, JSON.stringify(users, null, ' '));
+                res.redirect('/user/listUser');
             }
-        }else{
+        } else {
             res.render('formRegister', {
-                 errors: errors.mapped(),
-                  oldData: req.body,
-                  countries
-                });
+                errors: errors.mapped(),
+                oldData: req.body,
+                countries
+            });
         }
     },
 
     listUsers: (req, res) => {
-        const users= getData();
+        const users = getData();
         res.render('listUsers', { users })
     },
 
-    loginProcces : (req, res) =>{
+    login: (req, res) => {
+        res.render('formLogin')
+    },
+
+    loginProcces: (req, res) => {
         let user = getData();
         let userToLogin = user.find(user => user.email === req.body.email);
-        if(userToLogin){
+        if (userToLogin) {
             let passwordCorrect = bcrypt.compareSync(req.body.password, userToLogin.password);
-            if(passwordCorrect){
+            if (passwordCorrect) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
                 console.log(req.session);
                 return res.render('index')
             }
             return res.render('index', {
-                errors : {
-                    email : {
-                        msg : 'Datos incorrectos'
+                errors: {
+                    email: {
+                        msg: 'Datos incorrectos'
                     }
                 }
             })
         }
 
         return res.render('index', {
-            errors : {
-                email : {
-                    msg : 'Email incorrecto'
+            errors: {
+                email: {
+                    msg: 'Email incorrecto'
                 }
             }
         })
     },
 
-    logout : (req, res) => {
+    logout: (req, res) => {
         req.session.destroy();
-      return  res.redirect('/');
+        return res.redirect('/');
     }
 }
 

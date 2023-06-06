@@ -15,6 +15,8 @@ router.get('/create',guestMiddleware ,userController.form);
 router.post('/create',uploadFile.single('imageUsers'),validatorRegister.registerValidator,userController.create);
 
 router.get('/listUser', userController.listUsers);
+
+router.get('/login',userController.login);
 router.post('/login', userController.loginProcces);
 
 router.get('/logout/', userController.logout);

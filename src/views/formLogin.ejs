@@ -8,46 +8,18 @@
         <!--Inicio cabecera-->
         <%- include('partials/header.ejs') %>
             <!--Fin cabecera-->
-            <div id="formRegister">
-                <div id="box-form">
-                    <ul class="errores"></ul>
-                    <form action="/user/create" method="post" enctype="multipart/form-data" class="validationFrontend">
-                        <div class="box-register">
-                            <input type="text" name="email" id="email" placeholder="Escribe tu email" value="<%= locals.oldData ? oldData.name : null%>">
-                            <p class="error-message" id="error-eamil"></p>
-                            <% if (locals.errors && errors.name) { %>
-                                <div class="error-validation">
-                                   
-                                    <%= errors.name.msg %>
-                                </div> 
-                                <% } %>
+            <div class="boxlogin">
+                <div class="login">
+                    <form action="" class="formlogin">
+                        <div class="inputlogin">
+                            <label for="">Usuario</label>
+                            <input type="email" name="email" id="">
                         </div>
-
-                        <div class="box-register">
-                            <input type="password" name="password" id= 'password' placeholder="Indica tu password">
-                            <p class="error-message" id="error-password"></p>
-                            <% if (locals.errors && errors.password) { %>
-                                <div class="error-validation">
-                                    
-                                    <%= errors.password.msg %>
-                                </div> 
-                                <% } %>
-                        </div>                     
-
-                        <div class="box-register">
-                            <select name="select" id="select">
-                                <% countries.forEach(country => { %>
-                                 <option><%= country.name.common %></option>
-                                <% }) %>
-                            </select>
+                        <div class="inputlogin">
+                            <label for="">Contraseña</label>
+                            <input type="password" name="password" id="">
                         </div>
-                       
-                        <div class="box-register">
-                            <div class="box-button">
-                                <button id= 'buttonEnviar'  type="submit">Enviar</button>                              
-                            </div>
-                        </div>
-
+                        <button type="submit">Ingresar</button>
                     </form>
                 </div>
             </div>
