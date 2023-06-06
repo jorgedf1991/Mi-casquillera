@@ -116,8 +116,8 @@ const controller = {
             {
                 name: req.body.name,
                 price: req.body.price,
-                description: req.body.description,
-                image: image
+                description: req.body.description
+                //image: image
             },
             {
                 where: { id: productId }

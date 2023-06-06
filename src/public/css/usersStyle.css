@@ -71,6 +71,29 @@ justify-content: center;
 
 /*Fin perfil Usuario*/
 
+/*iniciologin*/
+.formlogin{
+    text-align: center;
+
+}
+.boxlogin{
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.login{
+    box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
+    0px 1px white inset, 0px -3px 2px #47361A inset;
+    margin-bottom: 150px;
+}
+
+.inputlogin{
+    
+    margin: 10px;
+}
+
+
 
 @media (min-width: 768px) {
     #list-user {

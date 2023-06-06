@@ -49,3 +49,22 @@ conclusiones del Sprint 6:
 
 *Seguir haciendo: tener la serenidad en el grupo, entregar los proximos sprint a tiempo.
 
+conclusiones del Sprint 7:
+
+*comenzar a hacer: ponernos al dia en lo que no hemos trabajado aun 
+
+*Hacer mas: dejar puntos claros y tener mas dialogo para sacra el proyecto 
+
+*Hacer menos: dejar penas a un lado y expresar lo que no entendemos 
+
+*Seguir haciendo: dialogo en en grupo y levantar la mano cuando no podamos entregar algo a tiempo 
+
+conclusiones del sprint 8:
+
+*comenzar a hacer: trabajar en las tareas pendientes para poder entregar trabajos a tiempo 
+
+*Hacer mas: comunicarnos como equipo y tener mas encuentros 
+
+*Hacer menos: esperar que sea 1 sola persona la que se exprese en el grupo para poder entrar a un dialogo
+
+*Seguir haciendo: trabajar en las tareas asignadas por cada uno 
