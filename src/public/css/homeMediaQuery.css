@@ -1,6 +1,6 @@
 @media (min-width: 1370px) {
   .wrap {
-    width: 90%;
+    width: 85%;
     margin: 0px auto;
   }  
   .title-index {
@@ -20,6 +20,10 @@
   .wrap {
     width: 72%;
     margin: 0px auto;
+  }
+  
+  .footer_wrap{
+    width: 86%;
   }
 
   #banner h1 {

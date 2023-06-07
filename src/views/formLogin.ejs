@@ -10,10 +10,15 @@
             <!--Fin cabecera-->
             <div class="boxlogin">
                 <div class="login">
-                    <form action="" class="formlogin">
+                    <form action="/user/login" class="formlogin" method="post">
                         <div class="inputlogin">
                             <label for="">Usuario</label>
                             <input type="email" name="email" id="">
+                            <% if (locals.errors && errors.email) { %>
+                             <div class="error-message">
+                                <%= errors.email.msg %>
+                             </div>
+                            <% } %>
                         </div>
                         <div class="inputlogin">
                             <label for="">Contraseña</label>

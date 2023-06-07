@@ -1,9 +1,8 @@
-
 <nav class="menu">
     <section class="menu_container">
         <h1 class="menu_logo">Casquillera</h1>
 
-       
+
         <ul class="menu_links">
             <li class="menu_item">
                 <a href="/" class="menu_link">Inicio</a>
@@ -26,27 +25,35 @@
             </li>
 
             <li class="menu_item menu_item--show">
-                <a href="#" class="menu_link">Panel usuario<img src="/img/svg/arrow.svg" class="menu_arrow"></a>
+                    <% if (locals.isLogged ) { %>
+                    <a href="#" class="menu_link">Panel usuario<img src="/img/svg/arrow.svg" class="menu_arrow"></a>
 
-                <ul class="menu_nesting">
-                    <li class="menu_inside">
-                        <a href="/user/login" class="menu_link menu_link--inside ">Iniciar sesion</a>
+                    <ul class="menu_nesting">
+                        <li class="menu_inside">
+                            <a href="/user/perfil" class="menu_link menu_link--inside ">Perfil</a>
+                        </li>
+                        <li class="menu_inside">
+                            <a href="/user/logout" class="menu_link menu_link--inside ">Logout</a>
+                        </li>
+                    </ul>
+                </li>
+                <% } else { %>
+                    <li class="menu_item">
+                        <a href="/user/login" class="menu_link">Iniciar sesion</a>
                     </li>
-                    <li class="menu_inside">
-                        <a href="/user/create" class="menu_link menu_link--inside ">Registrarte</a>
+                    <li class="menu_item">
+                        <a href="/user/create" class="menu_link">Registrate</a>
                     </li>
-                </ul>
-            </li>
+                    <% } %>
+                        <li class="menu_item">
+                            <a href="#" class="menu_link">Contacto</a>
+                        </li>
 
-            <li class="menu_item">
-                <a href="#" class="menu_link">Contacto</a>
-            </li>
+                        <div id="search">
+                            <input type="text" placeholder="  Buscar" />
+                            <input type="button" value="L" class="icon" />
+                        </div>
 
-            <div id="search">
-                    <input type="text" placeholder="  Buscar"/>
-                    <input type="button" value="L" class="icon" />
-            </div>
-    
 
         </ul>
         <div class="menu_hamburge">

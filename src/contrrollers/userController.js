@@ -13,7 +13,9 @@ function getData() {
 const contrrollers = {
     userProfile: (req, res) => {
 
-        res.render('userProfile',)
+        res.render('userProfile', {
+            user: req.session. userLogged
+        })
     },
 
     form: (req, res) => {
@@ -82,9 +84,9 @@ const contrrollers = {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
                 console.log(req.session);
-                return res.render('index')
+                return res.redirect('/user/perfil')
             }
-            return res.render('index', {
+            return res.render('formLogin', {
                 errors: {
                     email: {
                         msg: 'Datos incorrectos'
@@ -93,7 +95,7 @@ const contrrollers = {
             })
         }
 
-        return res.render('index', {
+        return res.render('formLogin', {
             errors: {
                 email: {
                     msg: 'Email incorrecto'

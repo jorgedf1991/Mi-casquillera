@@ -23,10 +23,10 @@
     const deleteStyleHeight = () =>{
      listElement.forEach(Element =>{
  
-         if(Element.children[1].getAttribute('style')){
-             Element.children[1].removeAttribute('style');
+          if(Element.children[1].getAttribute('style')){
+              Element.children[1].removeAttribute('style');
              Element.classList.remove('menu_item--active');
-         }
+          }
      })
     }
  

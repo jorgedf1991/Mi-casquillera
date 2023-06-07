@@ -52,31 +52,39 @@ const controller = {
         }
     },
 
-    store: (req, res) => {
-
-        const image = req.file ? req.file.filename : 'default-user-image.png';
-        // const products = getData();
-        // const newProduct = {
-        //     id: products[products.length - 1].id + 1,
-        //     name: req.body.name,
-        //     price: req.body.price,
-        //     description: req.body.description,
-        //     image: image
-        // }
-        // products.push(newProduct);
-        // fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-        // res.send(req.body);
-        db.Product.create({
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            image: image
-        })
-            .then(() => {
-                res.redirect('/product');
-            })
-            .catch(error => res.send(error));
-
+    store: async (req, res) => {
+        try {
+            const image = req.file ? req.file.filename : 'default-user-image.png';
+            // const products = getData();
+            // const newProduct = {
+            //     id: products[products.length - 1].id + 1,
+            //     name: req.body.name,
+            //     price: req.body.price,
+            //     description: req.body.description,
+            //     image: image
+            // }
+            // products.push(newProduct);
+            // fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
+            // res.send(req.body);
+            const productCreated = await db.Product.create({
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description
+            });
+            // Despues de creado el producto el ID del producto se almacena en la variable productCreated
+            // el codigo serial algo asi:¨
+            // await db.ProductImage.create({
+            //      url: image,
+            //      products_id:  productCreated.id
+            // })
+            // para llegar aca tiene q:¨
+            // 1. crear la llave foranea en la tabla product_images
+            // 2. crear el modelo de la tabla product_images
+            // 3. El alias del modelo debe ser ProductImage
+            res.redirect('/product');
+        } catch (error) {
+            return res.json({ error });
+        }
     },
 
     formEdit: (req, res) => {
@@ -129,22 +137,23 @@ const controller = {
     },
 
     delete: (req, res) => {
-    //     try {
-    //         const { id } = req.params;
-    //         const products = getData();
-    //         const productsIndex = products.findIndex(product => product.id === +id);
-    //         products.splice(productsIndex, 1);
-    //         fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-    //         res.redirect('/product');
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    
+        //     try {
+        //         const { id } = req.params;
+        //         const products = getData();
+        //         const productsIndex = products.findIndex(product => product.id === +id);
+        //         products.splice(productsIndex, 1);
+        //         fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
+        //         res.redirect('/product');
+        //     } catch (error) {
+        //         console.log(error);
+        //     }
+
         let productId = req.params.id;
-        db.Product.destroy({where: {id: productId}, force: true})
-        .then(()=>{
-            return res.redirect('/product')})
-        .catch(error => res.send(error))
-     }
+        db.Product.destroy({ where: { id: productId }, force: true })
+            .then(() => {
+                return res.redirect('/product')
+            })
+            .catch(error => res.send(error))
+    }
 }
 module.exports = controller;

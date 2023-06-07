@@ -12,11 +12,17 @@ const mainRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productRouter = require('./routes/product');
 
+//Require Routes Api
+const apiUser = require('./routes/api/userApi');
+
+
 const userLoggedMiddleware = require('./middlewares/userToLoggedMiddleware');
 
 
 
-app.use(userLoggedMiddleware);
+
+
+
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.urlencoded({ extended : false }));
 app.use(express.json());
@@ -27,9 +33,14 @@ app.use(cors());
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './views'));
 
+app.use(userLoggedMiddleware);
+
 app.use('/', mainRouter);
 app.use('/user', userRouter);
 app.use('/product', productRouter);
+
+//routes api
+app.use('/api', apiUser);
 
 const port = process.env.PORT || 3000;
 app.listen( port, ()=> {
