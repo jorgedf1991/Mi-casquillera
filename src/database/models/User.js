@@ -1,55 +1,54 @@
-module.exports = (sequelize, dataTypes)=>{
+module.exports = (sequelize, dataTypes) => {
 
     let alias = "User";
 
     let cols = {
-        id : {
+        id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
-            autoIncrement: true 
+            autoIncrement: true
         },
-        
-        name : {
+
+        name: {
             type: dataTypes.STRING(500),
             allowNull: false
         },
 
-        last_name : {
-            type: dataTypes.STRING(500),
-            allowNull: false
-        },
-        
-        addres : {
+        last_name: {
             type: dataTypes.STRING(500),
             allowNull: false
         },
 
-        avatar : {
+        addres: {
             type: dataTypes.STRING(500),
             allowNull: false
         },
 
-        email : {
+        avatar: {
             type: dataTypes.STRING(500),
             allowNull: false
         },
-        
-        password : {
+
+        email: {
+            type: dataTypes.STRING(500),
+            allowNull: false
+        },
+
+        password: {
             type: dataTypes.STRING(500),
             allowNull: false
         }
     };
-    
-        let config = {
-            timestamps: true,
-            createdAt: 'created_at',
-            updatedAt: 'updated_at',
-            tableName: 'user'
-        };
-    
 
-    const User = sequelize.define(alias,cols,config);
+    let config = {
+        timestamps: false,
+        // deleteAt: false,
+        tableName: 'users'
+    };
+
+
+    const User = sequelize.define(alias, cols, config);
 
     User.associate = function (models) {
         User.belongsTo(models.Rol, {
@@ -58,7 +57,7 @@ module.exports = (sequelize, dataTypes)=>{
         })
     }
 
-   
-    
-    return  User;
+
+
+    return User;
 }

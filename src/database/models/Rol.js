@@ -16,9 +16,8 @@ module.exports = (sequelize, dataTypes)=>{
     };
     
         let config = {
-            timestamps: true,
-            createdAt: 'created_at',
-            updatedAt: 'updated_at',
+            timestamps: false,
+            // deleteAt: false,
             tableName: 'roles'
         };
     

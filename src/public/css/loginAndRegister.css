@@ -102,10 +102,18 @@ div .error-validation{
   border: 2px solid rgba(255, 0, 0, 0.514);
 }
 .is-valid {
-  color: rgb(0, 153, 255);
-  color: 2px solid rgb(0, 153, 255);
+  color: rgb(110, 194, 250);
+  color: 2px solid rgb(110, 194, 250);
 }
 
 .error-message {
   color:rgba(255, 0, 0, 0.514);
 }
+
+.box-button button[type="reset"]:hover {
+  background: #fcd88b;
+}
+
+ .box-button button[type="submit"]:hover{
+  background: #fcd88b;
+ }
