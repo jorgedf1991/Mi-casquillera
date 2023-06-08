@@ -30,19 +30,15 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER
       },
+      image: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       product_categories_id: {
         type: Sequelize.INTEGER,
         references: {
           model: 'product_categories',
           key: 'id'
-        }
-      },
-      product_images_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'product_images',
-          key: 'id'
-
         }
       }
     });

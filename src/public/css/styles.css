@@ -28,20 +28,21 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background: url(../img/pattern.png);
 }
 
- .wrap {
-   width: 1200px;
-   margin: 0 auto;
-  } 
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
 
-  .wrap-banner{
-    padding: 105px;
-  }
+.wrap-banner {
+  padding: 105px;
+}
 
 .gear,
 .icon {
@@ -243,23 +244,24 @@ aside h3:first-child {
 }
 
 #search {
-      height: 28px;
-      margin: 26px auto;
-      border: none;
-  }
-  #search input[type="text"]{
-    border: none;
-    font-size: 15px;
-  }
+  height: 28px;
+  margin: 26px auto;
+  border: none;
+}
 
-  #search .icon{
-    margin-left: -17px;
-    font-size: 12px;
-    border: none;
-  }
+#search input[type="text"] {
+  border: none;
+  font-size: 15px;
+}
+
+#search .icon {
+  margin-left: -17px;
+  font-size: 12px;
+  border: none;
+}
 
 
-#lateral input[type="text"]{
+#lateral input[type="text"] {
   width: 85%;
   height: 30px;
   border: none;
@@ -346,7 +348,7 @@ aside h3:first-child {
   border-radius: 4px;
   cursor: pointer;
   font-size: 15px;
-  font-family: "Candara";
+  font-family: "Candara", sans-serif;
   font-weight: lighter;
   margin-left: 17px;
   margin-bottom: 20px;
@@ -412,27 +414,27 @@ aside h3:first-child {
 
 /*ARTICULOS*/
 #articles {
-  
-  background: white;
+
+  background: rgba(255, 255, 255, 0.001);
 }
 
- .title-index{
+.title-index {
   display: block;
-    width: 92%;
-    height: 75px;
-    line-height: 75px;
-    text-align: center;
-    font-family: "BebasNeue";
-    font-size: 23px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    background: url(../img/pxgray.png), white;
-    box-shadow: 0px 1px 0px #393d3f, 1px 2px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
-    margin: 0px auto;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    color: #47361A;
+  width: 92%;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-family: "BebasNeue", sans-serif;
+  font-size: 23px;
+  font-weight: normal;
+  background: url(../img/pxgray.png), white;
+  box-shadow: 0px 1px 0px #393d3f, 1px 2px #393d3f, 2px 3px 0px #393d3f, 3px 4px 0px #393d3f;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  color: #47361A;
 }
+
 
 #articles article {
   width: 95%;
@@ -440,19 +442,23 @@ aside h3:first-child {
   border: 1px solid #ccc;
   margin: 40px auto;
   padding: 10px;
-  font-family: "Candara";
+  font-family: "Candara", sans-serif;
   background: white;
   color: black;
   box-shadow: 1px 1px 2px #ddd;
 }
 
-#articles #container-products {
+#articles #container-products { 
   width: 97%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   margin-left: 5px;
-  
+  align-items: center;
+  flex-direction: row;
+  flex-basis: 100%;
+  padding-top: 1.2rem;
+
 }
 
 #articles #container-products .box-product {
@@ -462,7 +468,10 @@ aside h3:first-child {
   border: 1px solid gray;
   background: #FFEDD2;
   box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
-  0px 1px white inset, 0px -3px 2px #47361A inset;
+    0px 1px white inset, 0px -3px 2px #47361A inset;
+
+  padding: 20px;
+
 }
 
 div .box-img {
@@ -500,7 +509,7 @@ div .box-img {
 .box-details .descrption-product {
   display: block;
   height: 70px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 
@@ -512,63 +521,13 @@ div .box-img {
   margin: 7px;
 }
 
-
-
-
-#blog {
-  height: 100px;
-  margin-top: 60px;
-  line-height: 100px;
-  text-align: center;
-  font-family: "Candana";
-  transition: all 1s;
+.wrap-content{
+  padding: 105px;
 }
 
-#blog:hover {
-  background-color: #FDB825;
-  border: 10px solid #FDB825;
-  border-radius: 240px;
-  box-shadow: 0px 0px 10px #FDB825;
-  animation: blind 10s infinite linear;
-}
 
-@keyframes blind {
-  0% {
-    border: 10px solid #FDB825;
-  }
 
-  25% {
-    border: 10px solid green;
-  }
 
-  50% {
-    border: 10px solid yellow;
-  }
-
-  75% {
-    border: 10px solid white;
-  }
-
-  100% {
-    border: 10px solid #FDB825;
-  }
-}
-
-#blog a {
-  display: block;
-  font-family: "Candana";
-  font-size: 40px;
-  letter-spacing: 3px;
-  color: #D4B48A;
-  text-decoration: none;
-  transition: all 1s;
-}
-
-#blog:hover a {
-  color: white;
-  text-shadow: 1px 1px 1px #FDB825, 1px 2px 1px #FDB825, 1px 3px 1px #FDB825,
-    1px 5px 1px #FDB825, 1px 6px 1px #FDB825;
-}
 
 /*footer*/
 
@@ -695,7 +654,7 @@ div .box-img {
 }
 
 button {
-  text-align: center;  
+  text-align: center;
   margin-top: 20px;
   color: white;
   background: linear-gradient(to bottom, #FDB825 0%, #FDB825 100%);
@@ -710,20 +669,20 @@ button {
   transition: all 300ms;
 }
 
-.profile-otras{
+.profile-otras {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.profile-otras-cervezas{
+.profile-otras-cervezas {
   width: 100px;
   height: 225px;
   margin: 10px;
   transition: all 1s;
-  
+
 }
 
-.profile-otras-cervezas:hover{
+.profile-otras-cervezas:hover {
   transform: scale(1.1);
 }

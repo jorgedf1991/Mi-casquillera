@@ -19,7 +19,7 @@ module.exports = {
       price: '4000',
       discount: 5,
       product_categories_id: 1,
-      product_images_id: 1
+      image: 'salamera.jpeg'
     },
     {
       name: "calentona",
@@ -27,7 +27,7 @@ module.exports = {
       price: '4000',
       discount: 5,
       product_categories_id: 1,
-      product_images_id: 2
+      image: 'calentona.jpeg'
     },
     {
       name: "asolapada",
@@ -35,7 +35,7 @@ module.exports = {
       price: '4000',
       discount: 5,
       product_categories_id: 1,
-      product_images_id: 3
+      image: 'asopalada.jpeg'
     },
     {
       name: "arrabalera",
@@ -43,7 +43,7 @@ module.exports = {
       price: '4000',
       discount: 5,
       product_categories_id: 1,
-      product_images_id: 4
+      image: 'arrabalera.jpeg'
     },
     {
       name: "melosa",
@@ -51,7 +51,7 @@ module.exports = {
       price: '4000',
       discount: 5,
       product_categories_id: 1,
-      product_images_id: 5
+      image: 'melosa.jpeg'
     },
     {
       name: "todera",
@@ -59,7 +59,7 @@ module.exports = {
       price: '4000',
       discount: 5,
       product_categories_id: 1,
-      product_images_id: 6
+      image: 'todera.jpeg'
     }
     ], {});
   },

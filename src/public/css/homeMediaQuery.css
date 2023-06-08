@@ -2,15 +2,20 @@
   .wrap {
     width: 85%;
     margin: 0px auto;
-  }  
+  }
+
   .title-index {
     width: 93%;
     font-size: 51px;
     margin-left: 25px;
   }
-  #articles #container-products .box-product{
+
+ 
+
+  #articles #container-products .box-product {
     width: 22%;
   }
+
   #articles #container-products .box-product {
     margin: 10px;
   }
@@ -21,8 +26,8 @@
     width: 72%;
     margin: 0px auto;
   }
-  
-  .footer_wrap{
+
+  .footer_wrap {
     width: 86%;
   }
 
@@ -76,11 +81,15 @@
     font-size: 14px;
   }
 
-  
+  #box-form {
+    width: 40%;
+  }
+
+
 }
 
 @media (max-width: 970px) {
-  
+
 
   #footer .wrap>div {
     width: 25%;
@@ -93,7 +102,7 @@
 }
 
 @media (max-width: 925px) {
- 
+
 
   #lateral {
     width: 25%;
@@ -147,6 +156,9 @@
   #banner h1 {
     font-size: 29px;
   }
+  #box-form {
+    width: 52%;
+  }
 
   .card {
     height: auto;
@@ -186,12 +198,12 @@
     width: 200px;
     margin: 0px auto;
   }
-  
+
 
   #lateral input[type="text"] {
     width: 70%;
   }
-  
+
 }
 
 @media (max-width: 660px) {
@@ -216,7 +228,7 @@
   #login input[type="password"] {
     width: 90%;
   }
-  
+
 
   #articles {
     float: none;
@@ -265,6 +277,10 @@
 
   #header {
     height: 240px;
+  }
+
+  #box-form {
+    width: 81%;
   }
 
   #menu {
@@ -320,6 +336,10 @@
     border-radius: 0px 0px 0px 0px;
   }
 
+  #articles #container-products .box-product {
+    width: 100%;
+  }
+
   #articles h2 {
     display: none;
   }
@@ -332,9 +352,10 @@
   #login input[type="password"] {
     width: 77%;
   }
+
   .box-details .descrption-product {
     display: none;
     height: 70px;
-    overflow: hidden; 
+    overflow: hidden;
   }
 }

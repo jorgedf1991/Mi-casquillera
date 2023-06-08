@@ -2,23 +2,13 @@ const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
 
-const user = db.User;
-const product = db.Product;
 
-const pathProduct = path.join(__dirname, '../data/productsData.json');
 
-function getData() {
-    return JSON.parse(fs.readFileSync(pathProduct, 'utf-8'));
-}
 
 const controller = {
 
-    //prueba
     product: (req, res) => {
-        // const { id } = req.params;
-        // const productDetail = getData();
-        // const productId = productDetail.find(product => product.id === +id);
-        // res.render('productList', { productDetail });
+        
         db.Product.findAll({
 
         })
@@ -27,14 +17,8 @@ const controller = {
             })
     },
 
-    //fin prueba
 
     productDetail: (req, res) => {
-        // const { id } = req.params;
-        // const productDetail = getData();
-        // const productId = productDetail.find(product => product.id === +id);
-        // //  res.render('productList', { productDetail });
-        // res.render('beer', { productId });
         db.Product.findByPk(req.params.id,
             {
 
@@ -55,99 +39,49 @@ const controller = {
     store: async (req, res) => {
         try {
             const image = req.file ? req.file.filename : 'default-user-image.png';
-            // const products = getData();
-            // const newProduct = {
-            //     id: products[products.length - 1].id + 1,
-            //     name: req.body.name,
-            //     price: req.body.price,
-            //     description: req.body.description,
-            //     image: image
-            // }
-            // products.push(newProduct);
-            // fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-            // res.send(req.body);
             const productCreated = await db.Product.create({
                 name: req.body.name,
                 price: req.body.price,
-                description: req.body.description
+                description: req.body.description,
+                image: image
             });
-            // Despues de creado el producto el ID del producto se almacena en la variable productCreated
-            // el codigo serial algo asi:¨
-            // await db.ProductImage.create({
-            //      url: image,
-            //      products_id:  productCreated.id
-            // })
-            // para llegar aca tiene q:¨
-            // 1. crear la llave foranea en la tabla product_images
-            // 2. crear el modelo de la tabla product_images
-            // 3. El alias del modelo debe ser ProductImage
             res.redirect('/product');
         } catch (error) {
             return res.json({ error });
         }
     },
 
-    formEdit: (req, res) => {
-        // try {
-        //     const { id } = req.params;
-        //     const products = getData();
-        //     const product = products.find(product => product.id === +id);
-        //     res.render('productEdit', { product });
-        // } catch (error) {
-        //     console.log(error);
-        // }
-        db.Product.findByPk(req.params.id,
-            {
+    formEdit: async (req, res) => {
+        try {
+            const product = await db.Product.findByPk(req.params.id);
+            res.render('productEdit', { product });
 
-            })
-            .then(product => {
-                res.render('productEdit', { product });
-            })
+        } catch (error) {
+            res.send(error)
+        }
     },
 
-    update: (req, res) => {
-        // const { id } = req.params;
-        // const products = getData();
-        // const productsIndex = products.findIndex(product => product.id === +id);
-        // const image = req.file ? req.file.filename : products[productsIndex].image;
-        // products[productsIndex] = {
-        //     ...products[productsIndex],
-        //     name: req.body.name,
-        //     price: req.body.price,
-        //     description: req.body.description,
-        //     image: image
-        // }
-        // fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-        // res.redirect('/product/details');
-        let productId = req.params.id;
-        db.Product.update(
-            {
-                name: req.body.name,
-                price: req.body.price,
-                description: req.body.description
-                //image: image
-            },
-            {
-                where: { id: productId }
-            })
-            .then(() => {
-                return res.redirect('/product')
-            })
-            .catch(error => res.send(error))
-    },
+    update: async (req, res) => {
+        try {
+           const { id } = req.params;
+           const product = await db.Product.findByPk(id);
+           const image = req.file ? req.file.filename : product.image; 
+     
+           const productToUpdate = {
+              name: req.body.name,
+              price: req.body.price,
+              description: req.body.description,
+              image: image
+           };
+     
+           await db.Product.update(productToUpdate, { where: { id } });
+           res.redirect('/product');
+        } catch (error) {
+           console.log(error);
+        }
+     },
 
     delete: (req, res) => {
-        //     try {
-        //         const { id } = req.params;
-        //         const products = getData();
-        //         const productsIndex = products.findIndex(product => product.id === +id);
-        //         products.splice(productsIndex, 1);
-        //         fs.writeFileSync(pathProduct, JSON.stringify(products, null, ' '));
-        //         res.redirect('/product');
-        //     } catch (error) {
-        //         console.log(error);
-        //     }
-
         let productId = req.params.id;
         db.Product.destroy({ where: { id: productId }, force: true })
             .then(() => {
