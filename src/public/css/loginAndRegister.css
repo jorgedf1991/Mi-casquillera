@@ -84,6 +84,14 @@ select {
   text-align: center;
 }
 
+/*login usuario*/
+
+.boxlogin input,
+select {
+  font-size: 7px;
+}
+
+
 @media (min-width: 1370px) {
 
   .box-register input,
