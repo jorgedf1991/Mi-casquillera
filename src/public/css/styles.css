@@ -627,15 +627,24 @@ div .box-img {
 }
 
 .profile-imagen {
-  width: 350px;
-  height: 550px;
+  width: 300px;
+  height: 600px;
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
+.profile-imagen {
+  transition: transform 0.3s ease;
+}
+
+.profile-imagen:hover {
+  transform: scale(1.1);
+}
+
 .profile-name {
-  font-size: 3em;
+  font-size: 4.0em;
   font-family: fantasy;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 #cerveza .profile-details {
@@ -653,6 +662,7 @@ div .box-img {
   flex-direction: row;
 }
 
+
 button {
   text-align: center;
   margin-top: 20px;
@@ -668,6 +678,16 @@ button {
   margin-bottom: 20px;
   transition: all 300ms;
 }
+
+.zoom-button{
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.zoom-button:hover {
+  transform: scale(1.1);
+ 
+}
+
 
 .profile-otras {
   display: flex;
@@ -685,4 +705,8 @@ button {
 
 .profile-otras-cervezas:hover {
   transform: scale(1.1);
+}
+
+.profile-product{
+  font-size: 1.2em; 
 }
