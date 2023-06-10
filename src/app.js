@@ -4,7 +4,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cors = require('cors');
-
+const cookies = require('cookie-parser');
 const app = express();
 
 
@@ -33,6 +33,7 @@ app.use(cors());
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './views'));
 
+app.use(cookies());
 app.use(userLoggedMiddleware);
 
 app.use('/', mainRouter);
