@@ -1,32 +1,34 @@
 
-
-div #box-profile-users, div #box-profile-product{
+div #box-profile-users, div #box-profile-product {
     background: white;
     margin: 10px;
     padding: 10px;
-    justify-content: space-evenly;
-    display: inline-block;
+    display: inline-flex;
     width: 87%;
     box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
-        0px 1px white inset, 0px -3px 2px #47361A inset;
+    0px 1px white inset, 0px -3px 2px #47361A inset;
 
 }
-.panel-users{
+
+.panel-users {
     padding: 124px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
 }
 
-.panel-users a{
+.panel-users a {
+    /*product list links*/
     text-decoration: none;
 }
 
 .profile-users, .profile-product {
     margin: 10px;
-    display: block;
     width: 87%;
     overflow: hidden;
 }
 
-.profile-users img, .profile-product img{
+.profile-users img, .profile-product img {
     width: 90%;
     background: #f4f7f4;
     display: block;
@@ -39,14 +41,14 @@ div #box-profile-users, div #box-profile-product{
 
 /*Inicio  Perfil Usuario*/
 
-.profile-user{
-display: flex;
-justify-content: center;
+.profile-user {
+    display: flex;
+    justify-content: center;
 }
 
-#container-profile{
+#container-profile {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     flex-direction: column;
     background: white;
     margin: 6px;
@@ -54,17 +56,18 @@ justify-content: center;
     box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A, 0px 1px white inset, 0px -3px 2px #47361A inset;
 }
 
-#container-profile h2{
+#container-profile h2 {
     margin-bottom: 15px;
     margin-top: 5px;
     text-align: center;
 }
 
-#container-profile .panel-profile{
+#container-profile .panel-profile {
     margin-top: 20px;
     margin-left: 5px;
 }
-#container-profile .button-profile{
+
+#container-profile .button-profile {
     text-align: center;
 }
 
@@ -72,27 +75,27 @@ justify-content: center;
 /*Fin perfil Usuario*/
 
 /*iniciologin*/
-.formlogin{
+.formlogin {
     text-align: center;
 
 }
-.boxlogin{
+
+.boxlogin {
     display: flex;
     justify-content: center;
     padding-top: 150px;
 }
 
-.login{
+.login {
     box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
     0px 1px white inset, 0px -3px 2px #47361A inset;
     margin-bottom: 150px;
 }
 
-.inputlogin{
-    
+.inputlogin {
+
     margin: 10px;
 }
-
 
 
 @media (min-width: 768px) {
@@ -101,7 +104,7 @@ justify-content: center;
         text-align: center;
     }
 
-    div #box-profile-users, div #box-profile-product{
+    div #box-profile-users, div #box-profile-product {
         background: white;
         margin: 10px;
         padding: 10px;
@@ -109,18 +112,18 @@ justify-content: center;
         display: inline-block;
         width: 40%;
         box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
-            0px 1px white inset, 0px -3px 2px #47361A inset;
+        0px 1px white inset, 0px -3px 2px #47361A inset;
 
     }
 
-    .profile-users, .profile-product{
+    .profile-users, .profile-product {
         margin: 10px;
         padding: 0px;
         display: block;
         width: 90%;
     }
 
-    .profile-users img, .profile-product img{
+    .profile-users img, .profile-product img {
         width: 90%;
         background: #f4f7f4;
         display: block;
@@ -131,13 +134,14 @@ justify-content: center;
 }
 
 @media (min-width: 1024px) {
-    #container-profile{
+    #container-profile {
         width: 40%;
     }
-    #container-profile img{
+
+    #container-profile img {
         width: 400px;
     }
-    
+
     #list-user {
         display: flex;
         text-align: center;
@@ -151,18 +155,18 @@ justify-content: center;
         display: inline-block;
         width: 25%;
         box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
-            0px 1px white inset, 0px -3px 2px #47361A inset;
+        0px 1px white inset, 0px -3px 2px #47361A inset;
 
     }
 
-    .profile-users, .profile-product{
+    .profile-users, .profile-product {
         margin: 5px;
         padding: 0px;
         display: block;
         width: 90%;
     }
 
-    .profile-users img, .profile-product img{
+    .profile-users img, .profile-product img {
         width: 95%;
         background: #f4f7f4;
         display: block;
@@ -170,7 +174,7 @@ justify-content: center;
         box-shadow: 1px 1px 2px #47361A;
         padding: 10px;
     }
-   
+
 }
 
 @media (min-width: 1044px) {
@@ -179,7 +183,7 @@ justify-content: center;
         text-align: center;
     }
 
-    div #box-profile-users, div #box-profile-product{
+    div #box-profile-users, div #box-profile-product {
         background: white;
         margin: 20px;
         padding: 10px;
@@ -187,18 +191,18 @@ justify-content: center;
         display: inline-block;
         width: 20%;
         box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A,
-            0px 1px white inset, 0px -3px 2px #47361A inset;
+        0px 1px white inset, 0px -3px 2px #47361A inset;
 
     }
 
-    .profile-users, .profile-product{
+    .profile-users, .profile-product {
         margin: 5px;
         padding: 0px;
         display: block;
         width: 90%;
     }
 
-    .profile-users img, .profile-product img{
+    .profile-users img, .profile-product img {
         width: 95%;
         background: #f4f7f4;
         display: block;
@@ -206,5 +210,5 @@ justify-content: center;
         box-shadow: 1px 1px 2px #47361A;
         padding: 10px;
     }
-   
+
 }

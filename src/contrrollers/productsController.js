@@ -8,7 +8,7 @@ const db = require('../database/models');
 const controller = {
 
     product: (req, res) => {
-        
+
         db.Product.findAll({
 
         })
@@ -39,7 +39,7 @@ const controller = {
     store: async (req, res) => {
         try {
             const image = req.file ? req.file.filename : 'default-user-image.png';
-            const productCreated = await db.Product.create({
+            await db.Product.create({
                 name: req.body.name,
                 price: req.body.price,
                 description: req.body.description,
@@ -63,23 +63,23 @@ const controller = {
 
     update: async (req, res) => {
         try {
-           const { id } = req.params;
-           const product = await db.Product.findByPk(id);
-           const image = req.file ? req.file.filename : product.image; 
-     
-           const productToUpdate = {
-              name: req.body.name,
-              price: req.body.price,
-              description: req.body.description,
-              image: image
-           };
-     
-           await db.Product.update(productToUpdate, { where: { id } });
-           res.redirect('/product');
+            const { id } = req.params;
+            const product = await db.Product.findByPk(id);
+            const image = req.file ? req.file.filename : product.image;
+
+            const productToUpdate = {
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                image: image
+            };
+
+            await db.Product.update(productToUpdate, { where: { id } });
+            res.redirect('/product');
         } catch (error) {
-           console.log(error);
+            console.log(error);
         }
-     },
+    },
 
     delete: (req, res) => {
         let productId = req.params.id;
