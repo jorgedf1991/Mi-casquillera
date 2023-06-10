@@ -50,23 +50,71 @@ justify-content: center;
     flex-direction: column;
     background: white;
     margin: 6px;
-    padding: 13px;
+    padding: 10px;
     box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A, 0px 1px white inset, 0px -3px 2px #47361A inset;
 }
 
 #container-profile h2{
     margin-bottom: 15px;
-    margin-top: 5px;
+    margin-left: 10px;
     text-align: center;
 }
 
 #container-profile .panel-profile{
     margin-top: 20px;
-    margin-left: 5px;
+    margin-left: 0px;
 }
 #container-profile .button-profile{
     text-align: center;
 }
+
+/* Estilos adicionales para perfil de usuario */
+
+#container-profile{
+    width: 130%;
+}
+
+.container-welcome {
+    display: flex;
+    justify-content: space-between;
+}
+.container-welcome h2 {
+    font-size: 16px;
+    color: #4f1e1ec4;
+}
+
+#container-profile .panel-profile {
+    text-align: center;
+    background: #fcad037d;
+    color:  #4f1e1ef6;
+    font-size: 17px;
+    border-radius: 5px;
+    
+
+}
+
+#container-profile .panel-profile i {
+    color: #2f78bc;
+}
+
+#container-profile .img-profile {
+    box-shadow: 0px 0px 1px #47361A, 0px 3px 7px #47361A, 0px 1px white inset, 0px -3px 2px #47361A inset;
+    border-radius: 5px;
+    width: 25%;
+}
+.button-profile button {
+    font-size: 18px;
+    border-radius: 2px
+    
+}
+
+.button-profile button:hover {
+    background:  #f8d280;
+    
+}
+/* Fin estilos adicionales */
+
+
 
 
 /*Fin perfil Usuario*/
@@ -128,6 +176,34 @@ justify-content: center;
         box-shadow: 1px 1px 2px #47361A;
         padding: 10px;
     }
+
+    /* Estilos adicionales media query 768px */
+
+    #container-profile{
+        width: 150%;
+        margin: 0px;
+    }
+
+    .container-welcome {
+         padding: 10px;
+    }
+
+    .container-welcome h2 {
+        font-size: 18px;  
+    }
+    
+    #container-profile .panel-profile {   
+        font-size: 25px;
+        padding: 10px;
+    }
+    
+    #container-profile .img-profile {     
+        width: 35%;
+    }
+    .button-profile button {
+        font-size: 25px;    
+    }
+    /* Fin estilos adicionales media 768px */
 }
 
 @media (min-width: 1024px) {
@@ -170,7 +246,27 @@ justify-content: center;
         box-shadow: 1px 1px 2px #47361A;
         padding: 10px;
     }
-   
+    /* Estilos adicionales @media 1024 */
+    #container-profile{
+        width: 400%;
+    }
+    
+     .container-welcome {
+         padding: 30px;
+    }
+    .container-welcome h2 {
+        font-size: 25px; 
+        padding: 10px;
+        margin: 15px;
+    }
+    
+    #container-profile .img-profile {     
+        width: 38%;
+    }
+   .button-profile button {
+        font-size: 30px;    
+    }
+   /* Fin */
 }
 
 @media (min-width: 1044px) {
@@ -206,5 +302,35 @@ justify-content: center;
         box-shadow: 1px 1px 2px #47361A;
         padding: 10px;
     }
+     /* Estilos adicionales @media 1440 */
+     #container-profile{
+        width: 100%;
+    }
+    
+     .container-welcome {
+         padding: 50px;
+    }
+    .container-welcome h2 {
+        font-size: 40px; 
+        padding: 30px;
+        margin: 30px;
+    }
+    
+    #container-profile .img-profile {   
+        width: 40%;
+    }
+    #container-profile .panel-profile {   
+        font-size: 35px;
+        padding: 30px;
+        margin: 10px;
+        
+    }
+    
+   .button-profile button {
+        font-size: 40px;
+        margin: 50px;
+       
+    }
+   /* Fin */
    
 }
