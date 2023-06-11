@@ -23,7 +23,7 @@
                                 <% } %>
                         </div>
                         <div class="box-register">
-                            <input type="text" name="last_name" id="name" placeholder="Indica tu Apliido" value="<%= locals.oldData ? oldData.last_name : null%>">
+                            <input type="text" name="last_name" id="last_name" placeholder="Indica tu Apellido" value="<%= locals.oldData ? oldData.last_name : null%>">
                             <p class="error-message" id="error-last_name"></p>
                             <% if (locals.errors && errors.name) { %>
                                 <div class="error-validation">
