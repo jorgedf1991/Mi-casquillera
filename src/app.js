@@ -14,6 +14,7 @@ const productRouter = require('./routes/product');
 
 //Require Routes Api
 const apiUser = require('./routes/api/userApi');
+const apiProduct = require('./routes/api/productsApi');
 
 
 const userLoggedMiddleware = require('./middlewares/userToLoggedMiddleware');
@@ -42,6 +43,7 @@ app.use('/product', productRouter);
 
 //routes api
 app.use('/api', apiUser);
+app.use('/api', apiProduct);
 
 const port = process.env.PORT || 3000;
 app.listen( port, ()=> {

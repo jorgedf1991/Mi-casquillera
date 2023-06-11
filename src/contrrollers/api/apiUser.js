@@ -3,7 +3,7 @@ const fs = require('fs');
 const db = require('../../database/models');
 
 const userAPIController = {
-    'list': (req, res) => {
+    'user': (req, res) => {
         db.User.findAll({})
         .then(user => {
             let respuesta = {

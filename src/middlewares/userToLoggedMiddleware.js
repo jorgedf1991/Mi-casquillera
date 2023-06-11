@@ -11,9 +11,11 @@ function userLoggedMiddleware(req, res, next) {
                         req.session.userLogged = userFromCookie;
                     }
                     
-                    res.locals.isLogged = !!req.session.userLogged;
-                
-                next();
+                    if (req.session && req.session.userLogged) {
+                        res.locals.isLogged = true;
+                    }
+    
+                    next();
             })
             .catch(err => {
                 console.log(err);
