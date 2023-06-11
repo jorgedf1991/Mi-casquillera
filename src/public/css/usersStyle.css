@@ -9,6 +9,16 @@ div #box-profile-users, div #box-profile-product {
     0px 1px white inset, 0px -3px 2px #47361A inset;
 
 }
+div #box-profile-product {
+    height: 500px;
+    overflow: hidden;
+}
+
+div .product-description{
+    height: 145px;
+    overflow: hidden;
+    font-size: 12px;
+}
 
 .panel-users {
     padding: 124px;
@@ -243,6 +253,7 @@ div #box-profile-users, div #box-profile-product {
     }
 
     .profile-users img, .profile-product img {
+        height: 250px;
         width: 95%;
         background: #f4f7f4;
         display: block;

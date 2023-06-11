@@ -97,7 +97,7 @@
   }
 
   #footer h5 {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -381,9 +381,7 @@
     font-size: 2.5em; /* Ajusta el tamaño de fuente según tus necesidades */
   }
 
-  .profile-product {
-    display: none; /* Oculta el elemento .profile-product */
-  }
+ 
 
   .zoom-button {
     font-size: 1.4em; /* Ajusta el tamaño de fuente según tus necesidades */
