@@ -97,7 +97,7 @@
   }
 
   #footer h5 {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
@@ -357,5 +357,37 @@
     display: none;
     height: 70px;
     overflow: hidden;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #cerveza .profile-details {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 320px) {
+  .profile-imagen {
+    width: 200px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: 400px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
+    margin-bottom: 10px; /* Ajusta el margen inferior según tus necesidades */
+  }
+
+  .profile-name {
+    font-size: 2.5em; /* Ajusta el tamaño de fuente según tus necesidades */
+  }
+
+ 
+
+  .zoom-button {
+    font-size: 1.4em; /* Ajusta el tamaño de fuente según tus necesidades */
+  }
+
+  #cerveza .profile-details {
+    display: none;
   }
 }

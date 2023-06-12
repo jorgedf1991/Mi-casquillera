@@ -18,7 +18,7 @@
 
                     <div id="contenedor">
                         <div>
-                            <img src="/img/products/<%=productId.image %>" alt="" class="profile-imagen">
+                            <img src="/img/products/<%=productId.image %>" alt="" class="profile-imagen zoom-image">
                         </div>
 
                         <div>
@@ -26,21 +26,24 @@
                         </div>
 
                         <div class="profile-details">
-                            <div class="profile-product">
-                                <%= productId.price %>
+                            <div class="profile-product"> 
+                                <p>Precio $
+                                <%= productId.price %></p>
                             </div>
 
                             <div class="profile-product">
+                                <hr> 
+                                <strong>Descripción:</strong> 
                                 <%= productId.description %>
                             </div>
                         </div>
                     </div>
                     <div class="profile-button">
                         <a href="/product/edit/<%= productId.id %>">
-                            <button>Editar Producto</button>
+                            <button class="zoom-button">Editar Producto</button>
                         </a>
                         <form action="/product/delete/<%= productId.id %>?_method=DELETE" method="POST">
-                            <button type="submit">Eliminar</button>
+                            <button class="zoom-button" type="submit">Eliminar</button>
                         </form>
                     </div>
 

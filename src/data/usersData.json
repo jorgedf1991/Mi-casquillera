@@ -46,5 +46,13 @@
   "email": "mcarrilloq@eafit.edu.co",
   "country": "Andorra",
   "image": "default-user-image.png"
+ },
+ {
+  "id": 7,
+  "name": "Mayerly Carrillo Quintero ",
+  "password": "$2a$10$D0W0/44cmpEEreAeWZo1KumguowhGC7648yuh8TcW3vZrm/NhsEBC",
+  "email": "delbinelie@gmail.com",
+  "country": "Netherlands",
+  "image": "default-user-image.png"
  }
 ]

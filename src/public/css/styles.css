@@ -448,7 +448,7 @@ aside h3:first-child {
   box-shadow: 1px 1px 2px #ddd;
 }
 
-#articles #container-products { 
+#articles #container-products {
   width: 97%;
   display: flex;
   flex-wrap: wrap;
@@ -487,7 +487,9 @@ div .box-img {
   margin-top: 10px;
 }
 
-
+ .profile-product img {
+height: 214px;
+}
 
 .box-details .name-product,
 .price-product {
@@ -512,6 +514,16 @@ div .box-img {
   overflow: hidden;
 }
 
+.panel-Product {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+#box-profile-product a{
+text-decoration: none;
+}
 
 
 .box-details .name-product,
@@ -521,8 +533,8 @@ div .box-img {
   margin: 7px;
 }
 
-.wrap-content{
-  padding: 105px;
+.wrap-content {
+  padding-top: 105px;
 }
 
 
@@ -539,11 +551,28 @@ div .box-img {
   overflow: hidden;
 }
 
+#footer .footer_wrap{
+  display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#footer .footer_wrap .copyright{
+  width: 100%;
+}
+
+#footer .footer_wrap .copyright:hover{
+  color: white;
+  text-decoration: underline;
+  font-size: 22px;
+  filter: drop-shadow(8PX 2PX 6PX BLACK);
+}
+
 #footer .wrap>div {
   float: left;
   width: 320px;
   height: 370px;
-  margin: 40px;
+  margin: 25px;
   text-align: center;
   color: #47361A;
   font-size: 20px;
@@ -611,6 +640,8 @@ div .box-img {
   width: 45px;
 }
 
+/*final footer*/
+
 /*Nuevo*/
 #cerveza {
   text-align: center;
@@ -627,20 +658,32 @@ div .box-img {
 }
 
 .profile-imagen {
-  width: 350px;
-  height: 550px;
+  width: 300px;
+  height: 600px;
   margin-top: 40px;
   margin-bottom: 20px;
 }
 
-.profile-name {
-  font-size: 3em;
-  font-family: fantasy;
+.profile-imagen {
+  transition: transform 0.3s ease;
 }
+
+.profile-imagen:hover {
+  transform: scale(1.1);
+}
+
+.profile-name {
+  font-size: 4.0em;
+  font-family: fantasy;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
 
 #cerveza .profile-details {
   display: flex;
   flex-direction: column;
+  height: 170px;
   align-items: center;
   border: 2px solid black;
   padding: 10px;
@@ -652,6 +695,7 @@ div .box-img {
   justify-content: center;
   flex-direction: row;
 }
+
 
 button {
   text-align: center;
@@ -669,6 +713,16 @@ button {
   transition: all 300ms;
 }
 
+.zoom-button {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.zoom-button:hover {
+  transform: scale(1.1);
+
+}
+
+
 .profile-otras {
   display: flex;
   flex-wrap: wrap;
@@ -685,4 +739,12 @@ button {
 
 .profile-otras-cervezas:hover {
   transform: scale(1.1);
+}
+
+.profile-product {
+  font-size: 1.2em;
+}
+
+.profile-product p {
+  font-weight: 600;
 }
