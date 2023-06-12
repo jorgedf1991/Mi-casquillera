@@ -104,6 +104,12 @@ select {
   margin: 5px;
 }
 
+.inputlogin .label:hover {
+  text-decoration: underline;
+  color: #FDB825;
+  filter: drop-shadow(8px 2px 12px #f3d083);
+}
+
 .checkbox {
   padding-top: 20px;
 }
