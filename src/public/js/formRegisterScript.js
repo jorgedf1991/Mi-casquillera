@@ -21,6 +21,13 @@ window.addEventListener('load', function () {
             form.name.classList.remove('is-invalid');
             form.name.classList.add('is-valid');
         }
+        if (!form.last_name.value) {
+            errors.push({ name: 'last_name', message: 'Este campo no puede estar vacio' });
+            form.last_name.classList.add('is-invalid');
+        } else {
+            form.last_name.classList.remove('is-invalid');
+            form.last_name.classList.add('is-valid');
+        }
         if (!form.password.value) {
             errors.push({ name: 'password', message: 'Este Campo no puede estar vacio' })
             form.password.classList.add('is-invalid');

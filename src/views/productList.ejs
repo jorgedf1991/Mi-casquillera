@@ -1,40 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head.ejs', {title: 'Detalles de Productos'}) %>
+<%- include('partials/head.ejs', {title: 'Detalles de Productos' }) %>
 
 
     <body>
         <!--Inicio cabecera-->
         <%- include('partials/header.ejs') %>
             <!--Fin cabecera-->
-           
-            <div id="list-user">
-                <div class="panel-users">
-                    <% products.forEach((product) => {%>
-                        <a href="/product/details/<%=product.id%>">
+
+            <article class="wrap-content">
+                <div id="list-Product">
+                    <div class="panel-Product">
+                        <% products.forEach((product)=> { %>
+    
                             <div id="box-profile-product">
-                                <div class="profile-product">
-                                  <img src="/img/products/<%=product.image %>" alt="">  
-                                </div>
+                                <a href="/product/details/<%= product.id %>">
+                                    <div class="profile-product">
+                                        <img src="/img/products/<%= product.image %>" alt="">
+                                    </div>
     
-                                <div class="profile-product">
-                                    <%= product.name %>
-                                </div>
+                                    <div class="profile-product">
+                                        <p><%= product.name %></p>
+                                    </div>
     
-                                <div class="profile-product">
-                                    <%= product.price %>
-                                </div>
+                                    <div class="profile-product">
+                                      <strong>Precio :</strong>  <%= product.price %>
+                                    </div>
     
-                                <div class="profile-product">
-                                    <%= product.description %>
-                                </div>
+                                    <div class="profile-product">
+                                        <div class="product-description">
+                                            <%= product.description %>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <% } )%>
+                            <% } ) %>
                     </div>
-                </div>  
-                    </a>
-              
+                </div>
+    
+    
+            </article>
             <!--Inicio Footer-->
             <div class="clearfix"></div>
             <%- include('partials/footer.ejs') %>

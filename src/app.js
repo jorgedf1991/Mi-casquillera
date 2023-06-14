@@ -4,7 +4,7 @@ const path = require('path');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cors = require('cors');
-
+const cookies = require('cookie-parser');
 const app = express();
 
 
@@ -15,6 +15,7 @@ const quienesSomosRouter = require('./routes/quienesSomos');
 
 //Require Routes Api
 const apiUser = require('./routes/api/userApi');
+const apiProduct = require('./routes/api/productsApi');
 
 
 const userLoggedMiddleware = require('./middlewares/userToLoggedMiddleware');
@@ -34,6 +35,7 @@ app.use(cors());
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, './views'));
 
+app.use(cookies());
 app.use(userLoggedMiddleware);
 
 app.use('/', mainRouter);
@@ -43,6 +45,7 @@ app.use('/quienes-somos',quienesSomosRouter);
 
 //routes api
 app.use('/api', apiUser);
+app.use('/api', apiProduct);
 
 const port = process.env.PORT || 3000;
 app.listen( port, ()=> {

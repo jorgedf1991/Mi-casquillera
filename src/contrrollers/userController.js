@@ -4,15 +4,12 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const fetch = require('node-fetch');
 
+const db = require('../database/models');
 
-const userFilePath = path.join(__dirname, '../data/usersData.json');
-function getData() {
-    return JSON.parse(fs.readFileSync(userFilePath, 'utf-8'));
-}
 
 const contrrollers = {
     userProfile: (req, res) => {
-
+      console.log(req.cookies.userEmail);
         res.render('userProfile', {
             user: req.session. userLogged
         })
@@ -29,45 +26,48 @@ const contrrollers = {
 
     create: async (req, res) => {
         const errors = validationResult(req);
-        const users = getData();
+        const userExisting = await db.User.findOne({ where: { email: req.body.email } });
         const countries = await fetch('https://restcountries.com/v3.1/all').then(response => response.json());
+      
         if (errors.isEmpty()) {
-            const existingUser = users.find(user => user.email === req.body.email);
-            if (existingUser) {
-                return res.render('formRegister', {
-                    countries,
-                    errors: {
-                        email: {
-                            msg: "El email ya se encuentra registrado"
-                        }
-                    }, oldData: req.body
-                });
-            } else {
-                const image = req.file ? req.file.filename : 'default-user-image.png';
-                const passEncriptada = bcrypt.hashSync(req.body.password, 10)
-                const newUser = {
-                    id: users[users.length - 1].id + 1,
-                    name: req.body.name,
-                    password: passEncriptada,
-                    email: req.body.email,
-                    country: req.body.select,
-                    image: image
-                };
-                users.push(newUser);
-                fs.writeFileSync(userFilePath, JSON.stringify(users, null, ' '));
-                res.redirect('/user/listUser');
-            }
-        } else {
-            res.render('formRegister', {
-                errors: errors.mapped(),
-                oldData: req.body,
-                countries
+          if (userExisting) {
+            return res.render('formRegister', {
+              countries,
+              errors: {
+                email: {
+                  msg: "El email ya se encuentra registrado"
+                }
+              },
+              oldData: req.body
             });
+          } else {
+            const image = req.file ? req.file.filename : 'default-user-image.png';
+            const passEncriptada = bcrypt.hashSync(req.body.password, 10)
+            const newUser = {
+              name: req.body.name,
+              password: passEncriptada,
+              email: req.body.email,
+              addres: req.body.select,
+              last_name : req.body.last_name,
+              avatar: image
+            };
+            
+            await db.User.create(newUser);
+            res.redirect('/user/listUser');
+          }
+        } else {
+          res.render('formRegister', {
+            errors: errors.mapped(),
+            oldData: req.body,
+            countries
+          });
         }
-    },
+      }
+   
+    ,
 
-    listUsers: (req, res) => {
-        const users = getData();
+    listUsers: async (req, res) => {
+        const users = await db.User.findAll();
         res.render('listUsers', { users })
     },
 
@@ -75,36 +75,46 @@ const contrrollers = {
         res.render('formLogin')
     },
 
-    loginProcces: (req, res) => {
-        let user = getData();
-        let userToLogin = user.find(user => user.email === req.body.email);
-        if (userToLogin) {
-            let passwordCorrect = bcrypt.compareSync(req.body.password, userToLogin.password);
+    loginProcces: async (req, res) => {
+        try {
+          const user = await db.User.findOne({ where: { email: req.body.email } });
+      
+          if (user) {
+            const passwordCorrect = bcrypt.compareSync(req.body.password, user.password);
+            
             if (passwordCorrect) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-                console.log(req.session);
-                return res.redirect('/user/perfil')
+              delete user.password;
+              req.session.userLogged = user;
+              console.log(req.session);
+              if(req.body.remember_user){
+                res.cookie('userEmail', req.body.email, { maxAge : (1000 * 60 * 2)})
+              }
+              return res.redirect('/user/perfil');
             }
-            return res.render('formLogin', {
-                errors: {
-                    email: {
-                        msg: 'Datos incorrectos'
-                    }
-                }
-            })
-        }
-
-        return res.render('formLogin', {
+          }
+      
+          return res.render('formLogin', {
             errors: {
-                email: {
-                    msg: 'Email incorrecto'
-                }
+              email: {
+                msg: 'Datos incorrectos'
+              }
             }
-        })
-    },
+          });
+        } catch (error) {
+          console.log(error);
+          res.render('formLogin', {
+            errors: {
+              email: {
+                msg: 'Error al intentar iniciar sesión'
+              }
+            }
+          });
+        }
+      }
+    ,
 
     logout: (req, res) => {
+      res.clearCookie('userEmail')
         req.session.destroy();
         return res.redirect('/');
     }

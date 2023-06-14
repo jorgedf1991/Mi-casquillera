@@ -12,15 +12,22 @@
             <section class="wrap wrap-content wrap-banner profile-user">
 
                 <div id="container-profile">
-                    <h2 class="title">Bienvenido <%= user.name %></h2>
-                    <img class="img-profile" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
-                        alt="Foto de perfil">
+                    <div class="container-welcome">
+                        <img class="img-profile"
+                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                            alt="Foto de perfil">
+                        <h2 class="title">Bienvenido <%= user.name %>
+                        </h2>
+                    </div>
                     <div class="panel-profile">
-                        <p class="rol">Rol: Admin</p>
-                        <p class="country">Pais: <%= user.country %></p>
+                        <i class="fa-solid fa-user"></i>
+                        <p class="rol">Admin</p>
+                        <i class="fa-solid fa-flag"></i>
+                        <p class="country"><%= user.country %>
+                        </p>
                     </div>
                     <div class="button-profile">
-                        <button >Editar perfil</button>
+                        <button>Editar perfil</button>
                     </div>
                 </div>
 
