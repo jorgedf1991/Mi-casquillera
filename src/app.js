@@ -11,6 +11,7 @@ const app = express();
 const mainRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productRouter = require('./routes/product');
+const quienesSomosRouter = require('./routes/quienesSomos');
 
 //Require Routes Api
 const apiUser = require('./routes/api/userApi');
@@ -38,6 +39,7 @@ app.use(userLoggedMiddleware);
 app.use('/', mainRouter);
 app.use('/user', userRouter);
 app.use('/product', productRouter);
+app.use('/quienes-somos',quienesSomosRouter);
 
 //routes api
 app.use('/api', apiUser);
