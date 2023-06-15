@@ -27,6 +27,13 @@ div .product-description{
     flex-basis: 100%;
 }
 
+.panel-somos {
+    padding: 124px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
 .panel-users a {
     /*product list links*/
     text-decoration: none;
@@ -318,4 +325,15 @@ div .product-description{
         padding: 10px;
     }
    
+}
+
+@media (min-width: 320px) { 
+
+    .panel-somos {
+        padding: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        box-sizing:border-box;
+    }
 }
