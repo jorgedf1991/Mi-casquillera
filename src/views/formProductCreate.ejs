@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head.ejs', {title: 'Registrar Producto'}) %>
+<%- include('partials/head.ejs', {title: 'Registrar Producto' }) %>
 
     <body>
         <!--Inicio cabecera-->
         <%- include('partials/header.ejs') %>
             <!--Fin cabecera-->
-           
+
             <div id="formRegister">
                 <div id="box-form">
-                    <form action="/product/create" method="post" enctype="multipart/form-data" class="validation_product_create">
+                    <form action="/product/create" method="post" enctype="multipart/form-data"
+                        class="validation_product_create">
                         <div class="box-register">
                             <input type="text" name="name" placeholder="Nombre del product">
                             <p class="error-message" id="error-name"></p>
@@ -20,9 +21,31 @@
                             <input type="number" name="price" placeholder="Indica un precio">
                             <p class="error-message" id="error-price"></p>
                         </div>
+                        <div class="box-register">
+                            <select name="product_categories" id="">
+                                <option value="">Elige la categoría</option>
+                                <% category.forEach(product => { %>
+                                <option value="<%=product.id%>"> <%= product.name %></option>
+                               <% }) %>
+                            </select>
+                            <p class="error-message" id="error-product_categories"></p>
+                        </div>
+                        <div class="box-register">
+                            <select name="discount" id="">
+                                <option value="discount">Descuento</option>
+                                <option value="10">10 %</option>
+                                <option value="20">20 %</option>
+                                <option value="30">30 %</option>
+                                <option value="40">40 %</option>
+                                <option value="50">50 %</option>
+                                <option value="60">60 %</option>
+                                <option value="70">70 %</option>
+                            </select>
+                            <p class="error-message" id="error-discount"></p>
+                        </div>
 
                         <div class="box-register">
-                            <textarea name="description"  cols="30" rows="10"></textarea>
+                            <textarea name="description" cols="30" rows="10"></textarea>
                             <p class="error-message" id="error-description"></p>
                         </div>
 
@@ -42,8 +65,8 @@
 
                     </form>
                 </div>
-            </div>  
-              
+            </div>
+
             <!--Inicio Footer-->
             <div class="clearfix"></div>
             <%- include('partials/footer.ejs') %>

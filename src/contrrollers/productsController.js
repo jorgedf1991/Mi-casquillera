@@ -30,7 +30,11 @@ const controller = {
 
     formCreate: (req, res) => {
         try {
-            res.render('formCreate');
+            db.Category.findAll()
+            .then(category => {
+                res.render('formProductCreate', {category})
+            })
+            
         } catch (error) {
             console.log(error);
         }
@@ -42,6 +46,8 @@ const controller = {
             await db.Product.create({
                 name: req.body.name,
                 price: req.body.price,
+                discount: req.body.discount,
+                product_categories_id: req.body.product_categories,
                 description: req.body.description,
                 image: image
             });

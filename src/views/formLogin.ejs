@@ -12,7 +12,7 @@
                 <div class="login">
                     <form action="/user/login" class="formlogin" method="post">
                         <div class="inputlogin">
-                            <label for="">Usuario</label>
+                            <label for="" class="label">Usuario</label>
                             <input type="email" name="email" id="">
                             <% if (locals.errors && errors.email) { %>
                              <div class="error-message">
@@ -21,10 +21,10 @@
                             <% } %>
                         </div>
                         <div class="inputlogin">
-                            <label for="">Contraseña</label>
+                            <label for=""class="label">Contraseña</label>
                             <input type="password" name="password" id="">
                         </div>
-                        <div class="inputlogin">
+                        <div class="inputlogin checkbox">
                             <label for="recordarme">
                                 <input type="checkbox" name="remember_user" >
                                 recordar mi usuario
