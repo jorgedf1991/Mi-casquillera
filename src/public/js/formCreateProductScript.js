@@ -35,6 +35,20 @@ window.addEventListener('load', function () {
             form.description.classList.remove('is-invalid');
             form.description.classList.add('is-valid');
         }
+        if (!form.description.value) {
+            errors.push({ name: 'product_categories', message: 'Debes completar este campo' })
+            form.description.classList.add('is-invalid');
+        } else {
+            form.description.classList.remove('is-invalid');
+            form.description.classList.add('is-valid');
+        }
+        if (!form.description.value) {
+            errors.push({ name: 'discount', message: 'Debes completar este campo' })
+            form.description.classList.add('is-invalid');
+        } else {
+            form.description.classList.remove('is-invalid');
+            form.description.classList.add('is-valid');
+        }
 
         errors.forEach(error => {
             const errorLabel = document.getElementById('error-' + error.name);

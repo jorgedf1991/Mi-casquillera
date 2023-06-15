@@ -1,6 +1,5 @@
 const { validationResult } = require('express-validator');
-const fs = require('fs');
-const path = require('path');
+
 const bcrypt = require('bcryptjs');
 const fetch = require('node-fetch');
 
@@ -19,7 +18,7 @@ const contrrollers = {
         fetch('https://restcountries.com/v3.1/all')
             .then(response => response.json())
             .then(countries => {
-                return res.render('formRegister', { countries });
+                return res.render('formUserRegister', { countries });
             })
 
     },
@@ -31,7 +30,7 @@ const contrrollers = {
       
         if (errors.isEmpty()) {
           if (userExisting) {
-            return res.render('formRegister', {
+            return res.render('formUserRegister', {
               countries,
               errors: {
                 email: {
@@ -56,7 +55,7 @@ const contrrollers = {
             res.redirect('/user/listUser');
           }
         } else {
-          res.render('formRegister', {
+          res.render('formUserRegister', {
             errors: errors.mapped(),
             oldData: req.body,
             countries
