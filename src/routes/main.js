@@ -6,4 +6,5 @@ const router = express.Router();
 
 router.get('/', mainControllers.home);
 
+router.get('/contacto',mainControllers.contact );
 module.exports = router;

@@ -756,3 +756,22 @@ button {
   padding-top: 80px;
 }
 
+/* views contacto */
+
+#box_contact {
+  padding-top: 160px;
+  
+}
+
+.contact {
+text-align: center ;
+padding-bottom: 100px;
+}
+
+.contact h1 {
+  margin: 15px;
+}
+
+.contact p strong:hover {
+  color: #FDB825;
+}

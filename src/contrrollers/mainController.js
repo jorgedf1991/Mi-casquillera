@@ -17,6 +17,9 @@ const contrrollers = {
 
         res.render('index');
         
+    },
+    contact: (req, res) => {
+        res.render('viewsContact')
     }
 }
 
