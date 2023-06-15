@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs', {title: 'cart' }) %>
+    <!--Inicio cabecera-->
+
+    <body class="body-cart">
+        <%- include('partials/header.ejs') %>
+            <!--Fin cabecera-->
+
+            <div class="cart-container">
+                <div id="root"></div>
+                <div class="sideBar">
+                    <div class="headCart">
+                        <p>Carrito</p>
+                        <div class="cart">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <p id="count">0</p>
+                        </div>
+                    </div>
+                    <div id="cartItem">El carrito esta vacio</div>
+                    <div class="foot">
+                        <h3>Total</h3>
+                        <h2 id="total">$0</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <!--Inicio Footer-->
+            <div class="clearfix"></div>
+            <%- include('partials/footer.ejs') %>
+
+                <!--Inicio Footer-->
+               <!--<script src="/js/navScript.js"></script>--> 
+                <script src="/js/addToCart.js"></script>
+    </body>
+
+</html>
