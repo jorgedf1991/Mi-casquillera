@@ -358,6 +358,10 @@
     height: 70px;
     overflow: hidden;
   }
+
+  .cart-info p{
+    display: none;
+  }
 }
 
 
