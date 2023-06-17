@@ -26,7 +26,7 @@
 
 
 /*Generalres*/
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -65,7 +65,8 @@ select {
 .box-register input[type="file"] {
   font-size: 11px;
 }
-.box-button{
+
+.box-button {
   text-align: center;
 }
 
@@ -127,7 +128,7 @@ select {
   }
 }
 
-div .error-validation{
+div .error-validation {
   color: red;
   margin-left: 6px;
 }
@@ -136,19 +137,28 @@ div .error-validation{
   color: rgba(255, 0, 0, 0.514);
   border: 2px solid rgba(255, 0, 0, 0.514);
 }
+
 .is-valid {
   color: rgb(110, 194, 250);
   color: 2px solid rgb(110, 194, 250);
 }
 
 .error-message {
-  color:rgba(255, 0, 0, 0.514);
+  color: rgba(255, 0, 0, 0.514);
+}
+
+.error-message-login {
+  color: red;
+  position: absolute;
+  top: 98px;
+  left: 68px;
+  font-weight: bold;
 }
 
 .box-button button[type="reset"]:hover {
   background: #fcd88b;
 }
 
- .box-button button[type="submit"]:hover{
+.box-button button[type="submit"]:hover {
   background: #fcd88b;
- }
+}

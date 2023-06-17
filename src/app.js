@@ -11,7 +11,6 @@ const app = express();
 const mainRouter = require('./routes/main');
 const userRouter = require('./routes/user');
 const productRouter = require('./routes/product');
-const quienesSomosRouter = require('./routes/quienesSomos');
 const cartRouter = require('./routes/cart');
 
 //Require Routes Api

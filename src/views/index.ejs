@@ -22,128 +22,31 @@
                 </section>
                 <!--Inicio articulos-->
                 <h2 class="title-index">Nuestros Productos</h2>
-                <section id="articles">
-                    <div id="container-products">
-                        <div class="box-product">
-                            <div class="box-img">
-                                <img src="/img/arrabalera.jpeg" alt="">
-                            </div>
-                            <div class="box-details">
-                                <p class="name-product"> <a href="/product/details/2">Arrabalera</a></p>
-                                <p class="price-product">$ 4000</p>
-                                <p class="descrption-product">Ale refrescante y de especiada con fuertes notas a
-                                    cítricos de color naranja oscuro, altamente carbonatada, bien lupulada y seca, con
-                                    una acidez mitigadora de la sed, con 5.3% aprox de alcohol, una cerveza para los mas
-                                    arriesgados que disfrutan de sabores intensos.</p>
-                            </div>
-                        </div>
-
-                        <div class="box-product">
-                            <div class="box-img">
-                                <img src="/img/arrabalera.jpeg" alt="">
-                            </div>
-                            <div class="box-details">
-                                <p class="name-product"> <a href="#">Arrabalera</a></p>
-                                <p class="price-product">$ 4000</p>
-                                <p class="descrption-product">Ale refrescante y de especiada con fuertes notas a
-                                    cítricos de color naranja oscuro, altamente carbonatada, bien lupulada y seca, con
-                                    una acidez mitigadora de la sed, con 5.3% aprox de alcohol, una cerveza para los mas
-                                    arriesgados que disfrutan de sabores intensos.</p>
-                            </div>
-                        </div>
-
-                        <div class="box-product">
-                            <div class="box-img">
-                                <img src="/img/arrabalera.jpeg" alt="">
-                            </div>
-                            <div class="box-details">
-                                <p class="name-product"> <a href="#">Arrabalera</a></p>
-                                <p class="price-product">$ 4000</p>
-                                <p class="descrption-product">Ale refrescante y de especiada con fuertes notas a
-                                    cítricos de color naranja oscuro, altamente carbonatada, bien lupulada y seca, con
-                                    una acidez mitigadora de la sed, con 5.3% aprox de alcohol, una cerveza para los mas
-                                    arriesgados que disfrutan de sabores intensos.</p>
-                            </div>
-                        </div>
-
-                        <div class="box-product">
-                            <div class="box-img">
-                                <img src="/img/arrabalera.jpeg" alt="">
-                            </div>
-                            <div class="box-details">
-                                <p class="name-product"> <a href="#">Arrabalera</a></p>
-                                <p class="price-product">$ 4000</p>
-                                <p class="descrption-product">Ale refrescante y de especiada con fuertes notas a
-                                    cítricos de color naranja oscuro, altamente carbonatada, bien lupulada y seca, con
-                                    una acidez mitigadora de la sed, con 5.3% aprox de alcohol, una cerveza para los mas
-                                    arriesgados que disfrutan de sabores intensos.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div id="container-products">
-                        <div class="box-product">
-                            <div class="box-img">
-                                <img src="/img/arrabalera.jpeg" alt="">
-                            </div>
-                            <div class="box-details">
-                                <p class="name-product"> <a href="/product/details/2">Arrabalera</a></p>
-                                <p class="price-product">$ 4000</p>
-                                <p class="descrption-product">Ale refrescante y de especiada con fuertes notas a
-                                    cítricos de color naranja oscuro, altamente carbonatada, bien lupulada y seca, con
-                                    una acidez mitigadora de la sed, con 5.3% aprox de alcohol, una cerveza para los mas
-                                    arriesgados que disfrutan de sabores intensos.</p>
-                            </div>
-                        </div>
-
-                        <div class="box-product">
-                            <div class="box-img">
-                                <img src="/img/arrabalera.jpeg" alt="">
-                            </div>
-                            <div class="box-details">
-                                <p class="name-product"> <a href="#">Arrabalera</a></p>
-                                <p class="price-product">$ 4000</p>
-                                <div class="descrption-product1">
-                                    <p class="descrption-product">Ale refrescante y de especiada con fuertes notas a
-                                        cítricos de color naranja oscuro, altamente carbonatada, bien lupulada y seca,
-                                        con
-                                        una acidez mitigadora de la sed, con 5.3% aprox de alcohol, una cerveza para los
-                                        mas
-                                        arriesgados que disfrutan de sabores intensos.</p>
+                <div class="listing-section">
+                    
+                    <% products.forEach(product => { %>
+                    <div class="product">
+                            <div class="image-box">
+                                <div class="images" >
+                                     <img src="/img/products/<%= product.image %>" width="280" height="250" alt="">
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="box-product">
-                            <div class="box-img">
-                                <img src="/img/arrabalera.jpeg" alt="">
-                            </div>
-                            <div class="box-details">
-                                <p class="name-product"> <a href="#">Arrabalera</a></p>
-                                <p class="price-product">$ 4000</p>
-                                <p class="descrption-product">Ale refrescante y de especiada con fuertes notas a
-                                    cítricos de color naranja oscuro, altamente carbonatada, bien lupulada y seca, con
-                                    una acidez mitigadora de la sed, con 5.3% aprox de alcohol, una cerveza para los mas
-                                    arriesgados que disfrutan de sabores intensos.</p>
+                            <div class="text-box">
+                                <h2 class="item"><%= product.name %></h2>
+                                <h3 class="price"><%= product.price %></h3>
+                                <p class="description">A bag of delicious oranges!</p>
+                                <label class="label" for="item-1-quantity">Quantity:</label>
+                                <input class="input" type="text" name="item-1-quantity" id="item-1-quantity" value="1">
+                               <div class="info-product"> <a href="/cart">Ir al carrito</a></div>
                             </div>
                         </div>
-
-                        <div class="box-product">
-                            <div class="box-img">
-                                <img src="/img/arrabalera.jpeg" alt="">
-                            </div>
-                            <div class="box-details">
-                                <p class="name-product"> <a href="#">Arrabalera</a></p>
-                                <p class="price-product">$ 4000</p>
-                                <p class="descrption-product">Ale refrescante y de especiada con fuertes notas a
-                                    cítricos de color naranja oscuro, altamente carbonatada, bien lupulada y seca, con
-                                    una acidez mitigadora de la sed, con 5.3% aprox de alcohol, una cerveza para los mas
-                                    arriesgados que disfrutan de sabores intensos.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
+                        <% }) %>
+                  
+                   
+                  
+                  </div>
+                  
+                  
                 <!--Fin articulos-->
 
 

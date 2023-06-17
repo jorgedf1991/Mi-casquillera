@@ -1,14 +1,14 @@
 @media (min-width: 1370px) {
   .wrap {
-    width: 85%;
+    width: 100%;
     margin: 0px auto;
   }
 
   .title-index {
-    width: 93%;
+    width: 49%;
     font-size: 51px;
-    margin-left: 25px;
-  }
+    margin-left: 314px;
+}
 
  
 
@@ -357,10 +357,6 @@
     display: none;
     height: 70px;
     overflow: hidden;
-  }
-
-  .cart-info p{
-    display: none;
   }
 }
 

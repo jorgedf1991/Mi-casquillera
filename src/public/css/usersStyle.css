@@ -142,7 +142,7 @@ div .product-description{
 /*iniciologin*/
 .formlogin {
     text-align: center;
-
+    position: relative;
 }
 
 .boxlogin {
@@ -158,8 +158,7 @@ div .product-description{
 }
 
 .inputlogin {
-
-    margin: 10px;
+    margin: 20px;
 }
 
 
