@@ -23,7 +23,7 @@
 
 @media (max-width: 1254px) {
   .wrap {
-    width: 72%;
+    width: 100%;
     margin: 0px auto;
   }
 
@@ -167,6 +167,10 @@
   .card .category {
     font-size: 15px;
     margin-top: -23px;
+  }
+
+  .title-index {
+    font-size: 33px;
   }
 
   .card .description {
