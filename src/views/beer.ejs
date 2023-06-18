@@ -38,15 +38,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="profile-button">
-                        <a href="/product/edit/<%= productId.id %>">
-                            <button class="zoom-button">Editar Producto</button>
-                        </a>
-                        <form action="/product/delete/<%= productId.id %>?_method=DELETE" method="POST">
-                            <button class="zoom-button" type="submit">Eliminar</button>
-                        </form>
-                    </div>
-
+                    <% if (locals.isLogged ) { %>
+                        <div class="profile-button">
+                            <a href="/product/edit/<%= productId.id %>">
+                                <button class="zoom-button">Editar Producto</button>
+                            </a>
+                            <form action="/product/delete/<%= productId.id %>?_method=DELETE" method="POST">
+                                <button class="zoom-button" type="submit">Eliminar</button>
+                            </form>
+                        </div>
+                        
+                        <% } %>
                     </div>
                 </section>
             </section>

@@ -16,15 +16,23 @@
                         <img class="img-profile"
                             src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
                             alt="Foto de perfil">
-                        <h2 class="title">Bienvenido <%= user.name %>
-                        </h2>
+                        <div class="box-profile">
+                            <h2 class="title">Bienvenido <%= user.name %></h2>
+                            <div class="option-profile">
+                                <a href="http://localhost:3000/product/create">Crear un product</a>
+                                <a href="/product">Productos</a>
+                            </div>                           
+                        </div>
                     </div>
                     <div class="panel-profile">
                         <i class="fa-solid fa-user"></i>
                         <p class="rol">Admin</p>
                         <i class="fa-solid fa-flag"></i>
-                        <p class="country"><%= user.country %>
+                        <p class="country">
+                            <%= user.addres %>
                         </p>
+                    </div>
+                    <div>
                     </div>
                     <div class="button-profile">
                         <button>Editar perfil</button>

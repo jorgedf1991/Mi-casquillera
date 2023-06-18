@@ -122,6 +122,23 @@ div .product-description{
     border-radius: 5px;
     width: 25%;
 }
+
+div .option-profile{
+    display: flex;
+    flex-direction: column;
+    margin-left: 34px;
+}
+
+div .option-profile a{
+    color: #4f1e1ec4;
+    text-decoration: none;
+}
+
+div .option-profile a:hover{
+    color: #FDB825;
+    text-decoration: underline;
+}
+
 .button-profile button {
     font-size: 18px;
     border-radius: 2px
@@ -199,7 +216,7 @@ div .product-description{
     /* Estilos adicionales media query 768px */
 
     #container-profile{
-        width: 150%;
+        width: 70%;
         margin: 0px;
     }
 
@@ -269,7 +286,7 @@ div .product-description{
     }
     /* Estilos adicionales @media 1024 */
     #container-profile{
-        width: 400%;
+        width: 80%;
     }
  
      .container-welcome {
