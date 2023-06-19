@@ -510,6 +510,16 @@ div .box-img {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  gap: 14px;
+}
+
+.zoom-button {
+  height: 35px;
+  width: 100px;
+}
+
+.profile-button a, .profile-button button {
+  font-size: 16px;
 }
 
 
@@ -563,6 +573,7 @@ button {
 .profile-product p {
   font-weight: 600;
 }
+
 /* view somos */
 
 #list-somos {
@@ -573,12 +584,12 @@ button {
 
 #box_contact {
   padding-top: 160px;
-  
+
 }
 
 .contact {
-text-align: center ;
-padding-bottom: 100px;
+  text-align: center;
+  padding-bottom: 100px;
 }
 
 .contact h1 {

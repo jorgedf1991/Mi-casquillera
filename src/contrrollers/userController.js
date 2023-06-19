@@ -10,7 +10,7 @@ const contrrollers = {
     userProfile: (req, res) => {
       console.log(req.cookies.userEmail);
         res.render('userProfile', {
-            user: req.session. userLogged
+            user: req.session.userLogged
         })
     },
 
@@ -84,10 +84,9 @@ const contrrollers = {
             if (passwordCorrect) {
               delete user.password;
               req.session.userLogged = user;
-              console.log(req.session);
-              if(req.body.remember_user){
-                res.cookie('userEmail', req.body.email, { maxAge : (1000 * 60 * 2)})
-              }
+              // if(req.body.remember_user){
+              //   res.cookie('userEmail', req.body.email, { maxAge : (1000 * 60 * 2)})
+              // }
               return res.redirect('/user/perfil');
             }
           }
