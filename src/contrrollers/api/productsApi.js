@@ -2,17 +2,20 @@
 const path = require('path');
 const fs = require('fs');
 const db = require('../../database/models');
+const Category = require('../../database/models/Category');
 const Op = db.Sequelize.Op;
 
 
 const productAPIController = {
     'products': (req, res) => {
+        db.Category.findAll({})
         db.Product.findAll({})
         .then(product => {
             let respuesta = {
                 meta: {
                     status : 200,
                     total: product.length,
+                    categoryTotal: Category.length,
                     url: 'api/user'
                 },
                 data: product
