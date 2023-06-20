@@ -8,6 +8,8 @@ const router = express.Router();
 
 router.get('/', productsController.product);
 
+
+
 router.get('/details/:id', productsController.productDetail);
 
 router.get('/create', productsController.formCreate);
