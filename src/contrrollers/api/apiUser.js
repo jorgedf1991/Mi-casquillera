@@ -1,6 +1,8 @@
 const path = require('path');
 const fs = require('fs');
 const db = require('../../database/models');
+const Op = db.Sequelize.Op;
+
 
 const userAPIController = {
     'user': (req, res) => {
