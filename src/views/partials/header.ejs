@@ -38,7 +38,7 @@
                         </li>
 
                         <div id="search">
-                            <input type="text" placeholder="  Buscar" />
+                            <input type="search"  id="buscador"  placeholder="  Buscar" />
                             <input type="button" value="L" class="icon" />
                         </div>
 
@@ -48,4 +48,8 @@
             <img src="/img/svg/menu.svg" class="menu_img">
         </div>
     </section>
+    <script  src="/js/search.js"></script>
+    <div id="products-data" data-products="<%= JSON.stringify(products) %>"></div>
+
+
 </nav>
